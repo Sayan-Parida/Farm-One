@@ -20,23 +20,23 @@ def load_model():
         if os.path.exists(MODEL_PATH):
             try:
                 _model = joblib.load(MODEL_PATH)
-                print(f"✅ Model loaded from {MODEL_PATH}")
+                print(f"Model loaded from {MODEL_PATH}")
             except Exception as e:
                 _model = None
-                print(f"❌ Failed to load model at {MODEL_PATH}: {e}")
+                print(f"Failed to load model at {MODEL_PATH}: {e}")
         else:
-            print(f"❌ Model not found at {MODEL_PATH}")
-            
+            print(f"Model not found at {MODEL_PATH}")
+
     if _le is None:
         if os.path.exists(LABEL_ENCODER_PATH):
             try:
                 _le = joblib.load(LABEL_ENCODER_PATH)
-                print(f"✅ Label Encoder loaded from {LABEL_ENCODER_PATH}")
+                print(f"Label Encoder loaded from {LABEL_ENCODER_PATH}")
             except Exception as e:
                 _le = None
-                print(f"❌ Failed to load label encoder at {LABEL_ENCODER_PATH}: {e}")
+                print(f"Failed to load label encoder at {LABEL_ENCODER_PATH}: {e}")
         else:
-            print(f"❌ Label Encoder not found at {LABEL_ENCODER_PATH}")
+            print(f"Label Encoder not found at {LABEL_ENCODER_PATH}")
 
 def predict_crop(features: dict):
     """

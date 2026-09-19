@@ -25,9 +25,9 @@ def get_chat_response(question: str) -> str:
     try:
         client = get_chatbot_client()
 
-        # Use the same reliable Mistral model used elsewhere if available.
+        # mistralai/mistral-7b-instruct-v0.1 was removed from OpenRouter; use a current free model.
         response = client.chat.completions.create(
-            model="mistralai/mistral-7b-instruct-v0.1",
+            model="deepseek/deepseek-v4-flash-0731:free",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": question}
@@ -36,7 +36,24 @@ def get_chat_response(question: str) -> str:
             max_tokens=300
         )
 
-        return response.choices[0].message.content.strip()
+        content = response.choices[0].message.content
+        if not content:
+            print("[FARMBOT WARNING] Model returned empty content, retrying once")
+            response = client.chat.completions.create(
+                model="deepseek/deepseek-v4-flash-0731:free",
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": question}
+                ],
+                temperature=0.2,
+                max_tokens=300
+            )
+            content = response.choices[0].message.content
+
+        if not content:
+            return "FarmBot couldn't generate a response for that question. Please try rephrasing it."
+
+        return content.strip()
 
     except Exception as e:
         # Log the error to help debugging during development

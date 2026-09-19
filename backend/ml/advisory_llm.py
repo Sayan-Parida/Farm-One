@@ -62,8 +62,9 @@ User Question:"""
         user_content = question if question else "Please provide an advisory based on the dashboard data."
 
         # 4. Call OpenRouter
+        # mistralai/mistral-7b-instruct-v0.1 was removed from OpenRouter; use a current free model.
         response = client.chat.completions.create(
-            model="mistralai/mistral-7b-instruct-v0.1",
+            model="deepseek/deepseek-v4-flash-0731:free",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content}
@@ -72,7 +73,11 @@ User Question:"""
             max_tokens=400
         )
         
-        return response.choices[0].message.content.strip()
+        content = response.choices[0].message.content
+        if not content:
+            return "AI advisory couldn't be generated for this data. Please try again."
+
+        return content.strip()
 
     except Exception as e:
         print(f"[ADVISORY ERROR] {type(e).__name__}: {e}")
