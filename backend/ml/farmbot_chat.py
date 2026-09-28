@@ -5,7 +5,7 @@ import os
 env_path = Path(__file__).resolve().parents[1] / ".env"
 load_dotenv(dotenv_path=env_path)
 
-from ml.openrouter_clients import get_chatbot_client
+from ml.openrouter_clients import get_chatbot_client, chat_completion_with_fallback
 
 SYSTEM_PROMPT = """You are FarmBot, an agriculture-only assistant.
 
@@ -20,40 +20,22 @@ Rules:
 
 def get_chat_response(question: str) -> str:
     """
-    Generate a response from FarmBot (Agriculture only) using OpenRouter (Llama 3.1 8B).
+    Generate a response from FarmBot (Agriculture only) using OpenRouter.
+    Tries a chain of free models in order, since OpenRouter's free tier
+    rotates/deprecates models without notice.
     """
     try:
         client = get_chatbot_client()
 
-        # mistralai/mistral-7b-instruct-v0.1 was removed from OpenRouter; use a current free model.
-        response = client.chat.completions.create(
-            model="deepseek/deepseek-v4-flash-0731:free",
+        return chat_completion_with_fallback(
+            client=client,
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": question}
             ],
             temperature=0.2,
-            max_tokens=300
+            max_tokens=600
         )
-
-        content = response.choices[0].message.content
-        if not content:
-            print("[FARMBOT WARNING] Model returned empty content, retrying once")
-            response = client.chat.completions.create(
-                model="deepseek/deepseek-v4-flash-0731:free",
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": question}
-                ],
-                temperature=0.2,
-                max_tokens=300
-            )
-            content = response.choices[0].message.content
-
-        if not content:
-            return "FarmBot couldn't generate a response for that question. Please try rephrasing it."
-
-        return content.strip()
 
     except Exception as e:
         # Log the error to help debugging during development

@@ -5,7 +5,7 @@ import os
 env_path = Path(__file__).resolve().parents[1] / ".env"
 load_dotenv(dotenv_path=env_path)
 
-from ml.openrouter_clients import get_advisory_client
+from ml.openrouter_clients import get_advisory_client, chat_completion_with_fallback
 
 def generate_advice(weather, soil, crop_recommendation, yield_prediction, question=None):
     """
@@ -61,23 +61,17 @@ User Question:"""
 
         user_content = question if question else "Please provide an advisory based on the dashboard data."
 
-        # 4. Call OpenRouter
-        # mistralai/mistral-7b-instruct-v0.1 was removed from OpenRouter; use a current free model.
-        response = client.chat.completions.create(
-            model="deepseek/deepseek-v4-flash-0731:free",
+        # 4. Call OpenRouter (tries a chain of free models in order, since
+        # OpenRouter's free tier rotates/deprecates models without notice)
+        return chat_completion_with_fallback(
+            client=client,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content}
             ],
             temperature=0.3,
-            max_tokens=400
+            max_tokens=700
         )
-        
-        content = response.choices[0].message.content
-        if not content:
-            return "AI advisory couldn't be generated for this data. Please try again."
-
-        return content.strip()
 
     except Exception as e:
         print(f"[ADVISORY ERROR] {type(e).__name__}: {e}")
