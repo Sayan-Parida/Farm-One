@@ -292,6 +292,18 @@ def crops_in_district(district_code, season, min_years=HIST_MIN_OBS):
     return [{"crop": c, "avg_area_ha": round(float(row["area"]))} for c, row in counts.iterrows()]
 
 
+def seasons_for_crop(district_code, crop, min_years=HIST_MIN_OBS):
+    """Seasons in which this crop has enough recent official records in the district, largest area first."""
+    r = _load()
+    latest = r["meta"]["latest_data_year"]
+    a = r["apy"]
+    sub = a[(a["district_code"] == district_code) & (a["crop"] == crop)
+            & (a["year"] > latest - HIST_WINDOW)]
+    counts = sub.groupby("season").agg(n=("year", "nunique"), area=("area", "mean"))
+    counts = counts[counts["n"] >= min_years].sort_values("area", ascending=False)
+    return [{"season": s, "avg_area_ha": round(float(row["area"]))} for s, row in counts.iterrows()]
+
+
 def seasons_in_district(district_code):
     r = _load()
     a = r["apy"]
@@ -388,6 +400,14 @@ def predict_yield(features: dict):
         return {"error": f"'{crop_requested}' is not one of the crops the yield model covers.",
                 "status": 422, "supported_crops": sorted(CROPS), "available_crops": available,
                 "district": district, "season": season}
+    crop_seasons = seasons_for_crop(district["district_code"], crop) if crop else []
+    season_defaulted = False
+    if crop and crop not in {c["crop"] for c in available} and crop_seasons and not season_was_given:
+        # e.g. rice in West Bengal is recorded as Autumn/Winter/Summer, not Kharif — use the crop's main season
+        season = crop_seasons[0]["season"]
+        season_defaulted = True
+        ag_year = ag_year_for(season, today.year, today.month)
+        available = crops_in_district(district["district_code"], season)
     crop_defaulted = False
     if crop is None:
         if not available:
@@ -403,9 +423,12 @@ def predict_yield(features: dict):
 
     res = _predict_one(district, crop, season, ag_year, weather_feats, basis)
     if res is None:
+        hint = (f" It is recorded in {district['district']} as: "
+                + ", ".join(x["season"] for x in crop_seasons) + "." if crop_seasons else "")
         return {"error": f"{crop} has too few official {season} records in {district['district']} "
-                         f"to give a reliable estimate.", "status": 422,
-                "district": district, "season": season, "available_crops": available}
+                         f"to give a reliable estimate.{hint}", "status": 422,
+                "district": district, "season": season, "available_crops": available,
+                "crop_seasons": crop_seasons}
 
     test = r["report"]["test_by_crop"].get(crop, {})
     season_label = f"{season} {ag_year}-{str(ag_year + 1)[-2:]}"
@@ -420,6 +443,8 @@ def predict_yield(features: dict):
             f"Your own field may differ with irrigation, variety and inputs.")
     if crop_defaulted:
         note = f"No crop selected — showing the district's main {season} crop. " + note
+    if season_defaulted:
+        note = f"{crop} is mainly recorded as a {season} crop in {district['district']}, so that season is shown. " + note
 
     return {
         "expected_yield_ton_per_hectare": round(res["pred"], 2),
@@ -429,6 +454,7 @@ def predict_yield(features: dict):
         "note": note,
         "crop": crop,
         "crop_defaulted": crop_defaulted,
+        "season_defaulted": season_defaulted,
         "season": season,
         "agricultural_year": f"{ag_year}-{str(ag_year + 1)[-2:]}",
         "district": district["district"],
