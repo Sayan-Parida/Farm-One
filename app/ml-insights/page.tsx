@@ -9,14 +9,59 @@ type MLFeature = "crop" | "yield" | "advisory"
 
 interface CropRecommendation {
   crop: string
-  success_percentage: number
+  expected_yield_t_ha: number
+  range_t_ha: [number, number]
+  relative_to_national_pct: number
+  district_area_share_pct: number
   confidence_level: string
+}
+
+interface WeatherBasis {
+  months_in_season: number
+  months_observed: number
+  season_rain_mm: number
+  season_mean_temp_c: number
+  rain_vs_normal_pct: number | null
+  source: string
+}
+
+interface CropMeta {
+  district: string
+  state: string
+  season: string
+  agricultural_year: string
+  method: string
+  weather_basis: WeatherBasis
 }
 
 interface YieldPrediction {
   expected_yield_ton_per_hectare: number
+  range_ton_per_hectare: [number, number]
+  range_level: string
   confidence: string
   note: string
+  crop: string
+  season: string
+  agricultural_year: string
+  district: string
+  state: string
+  history: { years: string; mean_yield_t_ha: number; yearly: { year: string; yield_t_ha: number }[] }
+  weather_basis: WeatherBasis
+  available_crops: { crop: string; avg_area_ha: number }[]
+  available_seasons: string[]
+  model_accuracy: { tested_on: string; crop_median_error_pct: number | null; overall_median_error_pct: number }
+}
+
+const SEASONS = ["Kharif", "Rabi", "Summer", "Autumn", "Winter", "Whole Year"]
+
+// Backend returns {error, ...} with a 4xx/5xx status when it can't give a reliable answer.
+async function readError(response: Response) {
+  try {
+    const body = await response.json()
+    return { message: body.error || `HTTP error! status: ${response.status}`, body }
+  } catch {
+    return { message: `HTTP error! status: ${response.status}`, body: null }
+  }
 }
 
 export default function MLInsights() {
@@ -24,7 +69,12 @@ export default function MLInsights() {
   const [soilPH, setSoilPH] = useState("")
   const [organicCarbon, setOrganicCarbon] = useState("")
   const [soilTexture, setSoilTexture] = useState("Loam")
-  const [season, setSeason] = useState("Kharif")
+  const [cropSeason, setCropSeason] = useState("")    // "" = current season (backend decides)
+  const [yieldSeason, setYieldSeason] = useState("")
+  const [yieldCrop, setYieldCrop] = useState("")        // "" = district's main crop
+  const [yieldCropOptions, setYieldCropOptions] = useState<{ crop: string; avg_area_ha: number }[]>([])
+  const [yieldSeasonOptions, setYieldSeasonOptions] = useState<string[]>([])
+  const [cropMeta, setCropMeta] = useState<CropMeta | null>(null)
   const [rainfall, setRainfall] = useState("")
   const [temperature, setTemperature] = useState("")
   const [hasData, setHasData] = useState(false)
@@ -45,28 +95,38 @@ export default function MLInsights() {
       const farmData = storedData ? JSON.parse(storedData) : {}
 
       // Get previous results if available
-      const currentCrops = recommendations.length > 0 ? {
-        recommended_crops: recommendations.map(r => ({ crop: r.crop, success_percentage: r.success_percentage }))
-      } : { recommended_crops: [] }
+      const currentCrops = {
+        recommended_crops: recommendations.map(r => ({
+          crop: r.crop,
+          expected_yield_t_ha: r.expected_yield_t_ha,
+          relative_to_national_pct: r.relative_to_national_pct,
+        }))
+      }
 
       const currentYield = yieldResult ? {
         expected_yield_ton_per_hectare: yieldResult.expected_yield_ton_per_hectare,
-        confidence: yieldResult.confidence
-      } : { expected_yield_ton_per_hectare: 0, confidence: "N/A" }
+        confidence: yieldResult.confidence,
+        crop: yieldResult.crop,
+        season: `${yieldResult.season} ${yieldResult.agricultural_year}`,
+        district: `${yieldResult.district}, ${yieldResult.state}`,
+      } : { expected_yield_ton_per_hectare: null, confidence: "N/A" }
 
+      // Only real measurements; missing values are sent as null (the advisor shows N/A).
+      const w = farmData.weather || {}
+      const hasTemps = w.tmin_c != null && w.tmax_c != null
       const requestBody = {
         weather: {
-          temperature: (farmData.weather?.tmin_c + farmData.weather?.tmax_c) / 2 || 25,
-          temp_min: farmData.weather?.tmin_c || 20,
-          temp_max: farmData.weather?.tmax_c || 30,
-          humidity: farmData.weather?.humidity_pct || 70,
-          rainfall: farmData.weather?.rain_7d_mm || 50, // Using 7d rain as proxy
-          rain_7d: farmData.weather?.rain_7d_mm || 50
+          temperature: hasTemps ? (w.tmin_c + w.tmax_c) / 2 : null,
+          temp_min: w.tmin_c ?? null,
+          temp_max: w.tmax_c ?? null,
+          humidity: w.humidity_pct ?? null,
+          rainfall: w.rain_7d_mm ?? null,
+          rain_7d: w.rain_7d_mm ?? null
         },
         soil: {
-          ph: farmData.soil?.ph || 6.5,
-          organic_carbon_pct: farmData.soil?.oc_pct || 0.5,
-          texture: farmData.soil?.texture || "loam"
+          ph: farmData.soil?.ph ?? null,
+          organic_carbon_pct: farmData.soil?.oc_pct ?? null,
+          texture: farmData.soil?.texture ?? null
         },
         crop_recommendation: currentCrops,
         yield_prediction: currentYield,
@@ -130,14 +190,14 @@ export default function MLInsights() {
           if (data.soil) {
             setSoilPH(data.soil.ph?.toString() || "")
             setOrganicCarbon(data.soil.oc_pct?.toString() || "")
-            setSoilTexture(data.soil.texture || "Loam")
+            setSoilTexture(data.soil.texture || "N/A")
           }
 
           if (data.weather) {
             setRainfall(data.weather.rain_7d_mm?.toString() || "")
             // Use average of min and max temperature
-            const avgTemp = ((data.weather.tmin_c + data.weather.tmax_c) / 2).toFixed(1)
-            setTemperature(avgTemp)
+            const { tmin_c, tmax_c } = data.weather
+            setTemperature(tmin_c != null && tmax_c != null ? ((tmin_c + tmax_c) / 2).toFixed(1) : "")
           }
 
           setHasData(true)
@@ -155,24 +215,21 @@ export default function MLInsights() {
         }
       }
     }
-  }, [activeFeature, farmDataVersion])
+  }, [activeFeature, farmDataVersion, cropSeason, yieldSeason, yieldCrop])
 
   const fetchYieldPrediction = async (farmData: any) => {
     setLoading(true)
     setError(null)
 
     try {
+      if (farmData.location?.lat == null || farmData.location?.lon == null) {
+        throw new Error("Select a location on the map first.")
+      }
       const requestBody = {
-        weather: {
-          temp_min: farmData.weather?.tmin_c || 20,
-          temp_max: farmData.weather?.tmax_c || 30,
-          humidity: farmData.weather?.humidity_pct || 70,
-          rain_7d: farmData.weather?.rain_7d_mm || 50
-        },
-        soil: {
-          ph: farmData.soil?.ph || 6.5,
-          organic_carbon_pct: farmData.soil?.oc_pct || 0.5
-        }
+        lat: farmData.location.lat,
+        lon: farmData.location.lon,
+        crop_name: yieldCrop || null,
+        season: yieldSeason || null,
       }
 
       const response = await fetch(`/api/ml/yield`, {
@@ -184,11 +241,17 @@ export default function MLInsights() {
       })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        const { message, body } = await readError(response)
+        if (body?.available_crops) setYieldCropOptions(body.available_crops)
+        if (body?.available_seasons) setYieldSeasonOptions(body.available_seasons)
+        setYieldResult(null)
+        throw new Error(message)
       }
 
-      const data = await response.json()
+      const data: YieldPrediction = await response.json()
       setYieldResult(data)
+      setYieldCropOptions(data.available_crops || [])
+      setYieldSeasonOptions(data.available_seasons || [])
     } catch (err: any) {
       console.error("Error fetching yield prediction:", err)
       setError(err.message || "Failed to fetch yield prediction")
@@ -202,23 +265,14 @@ export default function MLInsights() {
     setError(null)
 
     try {
-      // Prepare request body from farm data
-      const tMin = Number(farmData.weather?.tmin_c)
-      const tMax = Number(farmData.weather?.tmax_c)
-      const avgTemp = (!isNaN(tMin) && !isNaN(tMax)) ? (tMin + tMax) / 2 : 25
-
-      const requestBody = {
-        weather: {
-          temperature: avgTemp,
-          humidity: Number(farmData.weather?.humidity_pct) || 70,
-          rainfall: Number(farmData.weather?.rain_7d_mm) || 100
-        },
-        soil: {
-          ph: Number(farmData.soil?.ph) || 6.5
-        }
+      if (farmData.location?.lat == null || farmData.location?.lon == null) {
+        throw new Error("Select a location on the map first.")
       }
-
-      console.log("🌾 Frontend: Sending crop request:", requestBody)
+      const requestBody = {
+        lat: farmData.location.lat,
+        lon: farmData.location.lon,
+        season: cropSeason || null,
+      }
 
       const response = await fetch(`/api/ml/crop`, {
         method: "POST",
@@ -229,12 +283,22 @@ export default function MLInsights() {
       })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        const { message } = await readError(response)
+        setRecommendations([])
+        setCropMeta(null)
+        throw new Error(message)
       }
 
       const data = await response.json()
-      console.log("🌾 Frontend: Received crop response:", data)
       setRecommendations(data.recommended_crops || [])
+      setCropMeta({
+        district: data.district,
+        state: data.state,
+        season: data.season,
+        agricultural_year: data.agricultural_year,
+        method: data.method,
+        weather_basis: data.weather_basis,
+      })
     } catch (err: any) {
       console.error("Error fetching recommendations:", err)
       setError(err.message || "Failed to fetch crop recommendations")
@@ -365,6 +429,19 @@ export default function MLInsights() {
                       </div>
                     )}
 
+                    <div className="flex flex-wrap items-center gap-3 mb-6 text-sm">
+                      <label className="text-gray-600">Season</label>
+                      <select value={cropSeason} onChange={(e) => setCropSeason(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+                        <option value="">Current season</option>
+                        {SEASONS.map((s) => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                      {cropMeta && (
+                        <span className="text-gray-600">
+                          {cropMeta.district}, {cropMeta.state} · {cropMeta.season} {cropMeta.agricultural_year}
+                        </span>
+                      )}
+                    </div>
+
                     {/* Form - Display Only */}
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
                       <div>
@@ -420,8 +497,14 @@ export default function MLInsights() {
                                 <Sprout className="w-6 h-6 text-emerald-600" />
                               </div>
                               <div>
-                                <h4 className="font-semibold text-lg capitalize">{rec.crop}</h4>
-                                <p className="text-sm text-gray-600">Success Rate: {rec.success_percentage}%</p>
+                                <h4 className="font-semibold text-lg">{rec.crop}</h4>
+                                <p className="text-sm text-gray-600">
+                                  Expected {rec.expected_yield_t_ha} t/ha (range {rec.range_t_ha[0]}–{rec.range_t_ha[1]})
+                                  {" · "}{rec.relative_to_national_pct}% of India median
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                  {rec.district_area_share_pct}% of this season's recorded crop area in the district
+                                </p>
                               </div>
                             </div>
                             <div>
@@ -436,6 +519,14 @@ export default function MLInsights() {
                           </div>
                         ))}
                       </div>
+                    )}
+
+                    {!loading && !error && recommendations.length > 0 && cropMeta && (
+                      <p className="mt-6 text-xs text-gray-500 leading-relaxed">
+                        {cropMeta.method} Weather: {cropMeta.weather_basis.months_observed} of{" "}
+                        {cropMeta.weather_basis.months_in_season} season months observed, rest from district normals.
+                        Soil readings are shown for reference only and are not used in this ranking.
+                      </p>
                     )}
 
                     {!loading && !error && recommendations.length === 0 && hasData && (
@@ -460,25 +551,25 @@ export default function MLInsights() {
                         <p className="text-sm text-gray-600">AI-Powered Harvest Estimation</p>
                       </div>
                     </div>
-                    {/* Form - Display Only Summary */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm mb-2">
-                      <div>
-                        <div className="text-gray-500 uppercase tracking-wide text-xs mb-1">Temperature</div>
-                        <div className="font-semibold">{temperature} °C</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-500 uppercase tracking-wide text-xs mb-1">Rainfall</div>
-                        <div className="font-semibold">{rainfall} mm</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-500 uppercase tracking-wide text-xs mb-1">Soil PH</div>
-                        <div className="font-semibold">{soilPH}</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-500 uppercase tracking-wide text-xs mb-1">Organic Carbon</div>
-                        <div className="font-semibold">{organicCarbon}%</div>
-                      </div>
+                    <div className="flex flex-wrap items-center gap-3 text-sm">
+                      <label className="text-gray-600">Crop</label>
+                      <select value={yieldCrop} onChange={(e) => setYieldCrop(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+                        <option value="">District&apos;s main crop</option>
+                        {yieldCropOptions.map((c) => (
+                          <option key={c.crop} value={c.crop}>{c.crop}</option>
+                        ))}
+                      </select>
+                      <label className="text-gray-600 ml-2">Season</label>
+                      <select value={yieldSeason} onChange={(e) => { setYieldSeason(e.target.value); setYieldCrop("") }} className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+                        <option value="">Current season</option>
+                        {(yieldSeasonOptions.length ? yieldSeasonOptions : SEASONS).map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
                     </div>
+                    <p className="mt-3 text-xs text-gray-500">
+                      Crops listed are those with official production records in this district for the season.
+                    </p>
                   </div>
 
                   {/* Results Card */}
@@ -502,9 +593,14 @@ export default function MLInsights() {
                       <div className="space-y-6">
                         <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between p-6 bg-emerald-50 rounded-xl border border-emerald-100">
                           <div>
-                            <div className="text-sm uppercase tracking-wide text-emerald-800 mb-1 font-medium">Expected Yield</div>
+                            <div className="text-sm uppercase tracking-wide text-emerald-800 mb-1 font-medium">
+                              {yieldResult.crop} · {yieldResult.season} {yieldResult.agricultural_year}
+                            </div>
                             <div className="text-4xl md:text-5xl font-serif font-bold text-emerald-900">
                               {yieldResult.expected_yield_ton_per_hectare} <span className="text-xl md:text-2xl font-sans font-normal text-emerald-700">tons/ha</span>
+                            </div>
+                            <div className="mt-1 text-sm text-emerald-800">
+                              Likely range {yieldResult.range_ton_per_hectare[0]}–{yieldResult.range_ton_per_hectare[1]} t/ha
                             </div>
                           </div>
 
@@ -512,7 +608,39 @@ export default function MLInsights() {
                             <span className={`px-4 py-2 rounded-full text-sm font-semibold border ${getConfidenceBadgeColor(yieldResult.confidence)}`}>
                               {yieldResult.confidence} Confidence
                             </span>
-                            <div className="mt-2 text-sm text-gray-500">Based on climate & soil analysis</div>
+                            <div className="mt-2 text-sm text-gray-500">
+                              District average · {yieldResult.district}, {yieldResult.state}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                              Official district yields ({yieldResult.history.years})
+                            </h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {yieldResult.history.yearly.map((h) => (
+                                <li key={h.year} className="flex justify-between">
+                                  <span>{h.year}</span><span>{h.yield_t_ha} t/ha</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <h4 className="text-sm font-semibold text-gray-900 mb-2">Season weather used</h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              <li className="flex justify-between"><span>Season rainfall</span><span>{yieldResult.weather_basis.season_rain_mm} mm</span></li>
+                              <li className="flex justify-between">
+                                <span>vs district normal</span>
+                                <span>{yieldResult.weather_basis.rain_vs_normal_pct == null ? "normal assumed" : `${yieldResult.weather_basis.rain_vs_normal_pct > 0 ? "+" : ""}${yieldResult.weather_basis.rain_vs_normal_pct}%`}</span>
+                              </li>
+                              <li className="flex justify-between"><span>Mean temperature</span><span>{yieldResult.weather_basis.season_mean_temp_c} °C</span></li>
+                              <li className="flex justify-between">
+                                <span>Months observed</span>
+                                <span>{yieldResult.weather_basis.months_observed} of {yieldResult.weather_basis.months_in_season}</span>
+                              </li>
+                            </ul>
                           </div>
                         </div>
 
@@ -525,6 +653,11 @@ export default function MLInsights() {
                               <h4 className="text-sm font-semibold text-gray-900 mb-1">Analysis Note</h4>
                               <p className="text-sm text-gray-600 leading-relaxed">
                                 {yieldResult.note}
+                              </p>
+                              <p className="mt-2 text-xs text-gray-500">
+                                Model accuracy on unseen years {yieldResult.model_accuracy.tested_on}: median error{" "}
+                                {yieldResult.model_accuracy.crop_median_error_pct ?? yieldResult.model_accuracy.overall_median_error_pct}%
+                                {yieldResult.model_accuracy.crop_median_error_pct != null ? ` for ${yieldResult.crop}` : " overall"}.
                               </p>
                             </div>
                           </div>
@@ -556,7 +689,7 @@ export default function MLInsights() {
                     </div>
 
                     <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-4 mb-6 text-sm text-gray-700">
-                      <p><strong>Context Loaded:</strong> We've prepared your location's weather ({temperature}°C, {rainfall}mm), soil parameters (pH {soilPH}), and crop analysis data for the AI.</p>
+                      <p><strong>Context Loaded:</strong> We've prepared your location's weather ({temperature || "N/A"}°C, {rainfall || "N/A"} mm in the last 7 days), soil parameters (pH {soilPH || "N/A"}), and crop analysis data for the AI.</p>
                     </div>
 
                     <div className="space-y-4">
@@ -607,7 +740,7 @@ export default function MLInsights() {
                       </div>
 
                       <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
-                        <span>AI-generated advice based on real-time factors.</span>
+                        <span>AI-generated advice — verify important decisions with your local agriculture extension office.</span>
                         <div className="flex gap-2">
                           <button onClick={() => setAdvisoryQuestion("")} className="text-emerald-600 hover:underline">Clear</button>
                         </div>

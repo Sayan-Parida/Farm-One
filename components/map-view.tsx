@@ -74,22 +74,21 @@ function MapViewComponent({ onMapClick, onDataFetched }: MapViewProps) {
     } catch (err: any) {
       console.error("Fetch Error:", err)
       setError("Error loading data: " + (err.message || "Unknown error"))
-      const mockData = {
+      // Keep only the location: weather/soil are unknown, so they are left empty rather
+      // than filled with made-up values the ML pages would treat as real measurements.
+      const locationOnly = {
         location: { lat, lon },
-        weather: { tmin_c: 21.4, tmax_c: 30.2, rain_7d_mm: 18, humidity_pct: 72 },
-        soil: { ph: 6.5, oc_pct: 0.9, texture: "loam" },
-        source: { weather: "Open-Meteo", soil: "SoilGrids" },
+        weather: { tmin_c: null, tmax_c: null, rain_7d_mm: null, humidity_pct: null, available: false },
+        soil: { ph: null, oc_pct: null, texture: null, available: false },
       }
-      setAnalysisData(mockData)
+      setAnalysisData(locationOnly)
 
-      // Store mock data too
       if (typeof window !== "undefined") {
-        sessionStorage.setItem("farmData", JSON.stringify(mockData))
-        // Notify other components that farmData has been updated
+        sessionStorage.setItem("farmData", JSON.stringify(locationOnly))
         window.dispatchEvent(new Event('farmDataUpdated'))
       }
 
-      return mockData
+      return locationOnly
     } finally {
       setLoading(false)
     }
@@ -125,11 +124,11 @@ function MapViewComponent({ onMapClick, onDataFetched }: MapViewProps) {
           <p style="margin: 0 0 8px 0; font-size: 12px; line-height: 1.4;">Lat: ${data.location.lat.toFixed(4)}, Lon: ${data.location.lon.toFixed(4)}</p>
           
           <h3 style="font-family: 'DM Serif Display', serif; font-size: 14px; font-weight: 600; margin: 8px 0 6px 0; color: #000;">Weather</h3>
-          <p style="margin: 0 0 4px 0; font-size: 12px;">Min: ${data.weather.tmin_c}°C  Max: ${data.weather.tmax_c}°C</p>
-          <p style="margin: 0 0 6px 0; font-size: 12px;">Rain (7d): ${data.weather.rain_7d_mm}mm  Humidity: ${data.weather.humidity_pct}%</p>
+          <p style="margin: 0 0 4px 0; font-size: 12px;">Min: ${data.weather.tmin_c ?? "N/A"}°C  Max: ${data.weather.tmax_c ?? "N/A"}°C</p>
+          <p style="margin: 0 0 6px 0; font-size: 12px;">Rain (7d): ${data.weather.rain_7d_mm ?? "N/A"}mm  Humidity: ${data.weather.humidity_pct ?? "N/A"}%</p>
           
           <h3 style="font-family: 'DM Serif Display', serif; font-size: 14px; font-weight: 600; margin: 8px 0 6px 0; color: #000;">Soil</h3>
-          <p style="margin: 0 0 4px 0; font-size: 12px;">pH: ${data.soil.ph}  OC: ${data.soil.oc_pct}%  Texture: ${data.soil.texture}</p>
+          <p style="margin: 0 0 4px 0; font-size: 12px;">pH: ${data.soil.ph ?? "N/A"}  OC: ${data.soil.oc_pct ?? "N/A"}%  Texture: ${data.soil.texture ?? "N/A"}</p>
           
           <button id="insights-btn" style="margin-top: 8px; width: 100%; padding: 8px 12px; border: 1px solid #000; background: #fff; color: #000; font-size: 12px; font-weight: 500; cursor: pointer; border-radius: 4px; font-family: 'Inter', sans-serif; transition: all 0.2s;">More Insights</button>
         </div>

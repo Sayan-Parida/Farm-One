@@ -18,13 +18,19 @@ def generate_advice(weather, soil, crop_recommendation, yield_prediction, questi
         
         # 1. Format Crops List
         crops = crop_recommendation.get("recommended_crops", [])
-        crop_list_str = ", ".join(
-            [f"{c['crop']} ({c['success_percentage']}%)" for c in crops]
-        ) if crops else "None"
+        def _fmt_crop(c):
+            if c.get("expected_yield_t_ha") is not None:
+                return (f"{c['crop']} (expected district yield {c['expected_yield_t_ha']} t/ha, "
+                        f"{c.get('relative_to_national_pct', '?')}% of India median)")
+            return c["crop"]
+        crop_list_str = ", ".join(_fmt_crop(c) for c in crops) if crops else "None"
 
         # 2. Extract Yield Data
-        yield_val = yield_prediction.get("expected_yield_ton_per_hectare", "N/A")
+        yield_val = yield_prediction.get("expected_yield_ton_per_hectare")
+        yield_val = "N/A" if yield_val is None else yield_val
         yield_conf = yield_prediction.get("confidence", "N/A")
+        yield_for = " / ".join(str(yield_prediction[k]) for k in ("crop", "season", "district")
+                               if yield_prediction.get(k))
 
         # 3. Build System Prompt
         context_str = f"""
@@ -40,7 +46,7 @@ Soil:
 
 ML Predictions:
 - Recommended Crops: {crop_list_str}
-- Estimated Yield: {yield_val} tons/hectare
+- Estimated Yield: {yield_val} tons/hectare (district average{f" for {yield_for}" if yield_for else ""})
 - Yield Confidence: {yield_conf}
 """
         system_prompt = f"""You are FarmBot, an AI agricultural expert. 

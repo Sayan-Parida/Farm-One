@@ -6,6 +6,6 @@ httpx==0.26.0
 python-dotenv==1.0.0
 numpy==2.3.3
 pandas==2.3.3
-scikit-learn==1.8.0
+scikit-learn==1.7.2  # 1.8.0 _cyutility.pyd is blocked by Windows Smart App Control
 joblib==1.5.3
 global-land-mask==1.0.0

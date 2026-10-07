@@ -6,9 +6,7 @@ from typing import Optional
 from global_land_mask import globe
 from services.weather import get_weather
 from services.soil import get_soil
-app = FastAPI(title="Farmone API", version="1.0.3")
-from ml.crop_recommendation import predict_crop
-from ml.yield_prediction import predict_yield
+from ml.yield_prediction import predict_yield, recommend_crops
 from ml.advisory_llm import generate_advice
 from ml.farmbot_chat import get_chat_response
 
@@ -36,6 +34,10 @@ class SoilData(BaseModel):
     ph: Optional[float] = None
 
 class CropPredictionRequest(BaseModel):
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+    season: Optional[str] = None      # Kharif / Rabi / Summer / ... (default: current season)
+    # Accepted for backwards compatibility; the district model does not use point weather/soil.
     weather: Optional[WeatherData] = None
     soil: Optional[SoilData] = None
 
@@ -49,35 +51,14 @@ async def health_check():
 
 @app.post("/api/ml/crop")
 async def recommend_crop(data: CropPredictionRequest):
-    # Dataset means as defaults
-    defaults = {
-        "temperature": 25.62,
-        "humidity": 71.48,
-        "rainfall": 103.46,
-        "ph": 6.47
-    }
-    
-    # Extract values or use defaults
-    weather = data.weather or WeatherData()
-    soil = data.soil or SoilData()
-    
-    features = {
-        "temperature": weather.temperature if weather.temperature is not None else defaults["temperature"],
-        "humidity": weather.humidity if weather.humidity is not None else defaults["humidity"],
-        "rainfall": weather.rainfall if weather.rainfall is not None else defaults["rainfall"],
-        "ph": soil.ph if soil.ph is not None else defaults["ph"]
-    }
-    
-    print(f"Backend: Received features: {features}")
-    try:
-        predictions = predict_crop(features)
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"error": f"Crop prediction failed: {e}"})
-    print(f"Backend: Returning: {predictions}")
-    
-    return {
-        "recommended_crops": predictions
-    }
+    """
+    Crops officially grown in the farm's district for the season, ranked by predicted
+    district yield relative to India's median for that crop. Requires lat/lon.
+    """
+    result = recommend_crops({"lat": data.lat, "lon": data.lon, "season": data.season})
+    if "error" in result:
+        return JSONResponse(status_code=result.pop("status", 500), content=result)
+    return result
 
 # Input models for Yield endpoint
 class YieldWeather(BaseModel):
@@ -91,10 +72,14 @@ class YieldSoil(BaseModel):
     organic_carbon_pct: Optional[float] = None
 
 class YieldPredictionRequest(BaseModel):
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+    crop_name: Optional[str] = None   # e.g. "Rice", "wheat", "chickpea"; default = district's main crop
+    season: Optional[str] = None      # Kharif / Rabi / Summer / Autumn / Winter / Whole Year
+    # Accepted for backwards compatibility; not used by the district model.
     weather: Optional[YieldWeather] = None
     soil: Optional[YieldSoil] = None
-    crop_name: Optional[str] = None   # e.g. "rice", "maize" from crop recommendation
-    country: Optional[str] = None     # e.g. "India" — improves regional accuracy
+    country: Optional[str] = None
 
 @app.get("/api/debug")
 async def debug_endpoint():
@@ -103,25 +88,15 @@ async def debug_endpoint():
 
 @app.post("/api/ml/yield")
 async def estimate_yield(data: YieldPredictionRequest):
-    """Estimate crop yield based on weather, soil, crop type and region."""
-    weather = data.weather if data.weather else YieldWeather()
-    soil    = data.soil    if data.soil    else YieldSoil()
-
-    features = {
-        "temp_min":             weather.temp_min,
-        "temp_max":             weather.temp_max,
-        "humidity":             weather.humidity,
-        "rain_7d":              weather.rain_7d,
-        "soil_ph":              soil.ph,
-        "organic_carbon_pct":   soil.organic_carbon_pct,
-        # New: crop type + country for improved accuracy
-        "crop_name":            data.crop_name,
-        "country":              data.country,
-    }
-
-    result = predict_yield(features)
-    if isinstance(result, dict) and "error" in result:
-        return JSONResponse(status_code=500, content=result)
+    """District-level yield estimate for a crop, season and location (see ml/yield_prediction.py)."""
+    result = predict_yield({
+        "lat": data.lat,
+        "lon": data.lon,
+        "crop_name": data.crop_name,
+        "season": data.season,
+    })
+    if "error" in result:
+        return JSONResponse(status_code=result.pop("status", 500), content=result)
     return result
 
 # Input models for Advisory endpoint
@@ -140,14 +115,18 @@ class AdvisorySoil(BaseModel):
 
 class CropItem(BaseModel):
     crop: str
-    success_percentage: int
+    expected_yield_t_ha: Optional[float] = None
+    relative_to_national_pct: Optional[float] = None
 
 class CropRecommendation(BaseModel):
     recommended_crops: list[CropItem] | list[str]  # Accept both formats
 
 class YieldPredictionData(BaseModel):
-    expected_yield_ton_per_hectare: float
+    expected_yield_ton_per_hectare: Optional[float] = None
     confidence: str
+    crop: Optional[str] = None
+    season: Optional[str] = None
+    district: Optional[str] = None
 
 class AdvisoryRequest(BaseModel):
     weather: AdvisoryWeather
@@ -204,25 +183,25 @@ async def analyze(lat: float, lon: float):
     # Call soil service - won't crash if it fails
     soil_raw = await get_soil(lat, lon)
     
-    # Transform weather data to match frontend expectations
-    # Frontend expects: tmin_c, tmax_c, rain_7d_mm, humidity_pct
-    current_temp = weather_raw.get("temperature", 25)
-    
+    # Only real measurements are passed on. Missing values stay None (shown as N/A) —
+    # never substituted with defaults, because downstream models would treat them as real.
+    weather_ok = "error" not in weather_raw
     weather_transformed = {
-        "tmin_c": round(current_temp - 3, 1), # Simulated min
-        "tmax_c": round(current_temp + 3, 1), # Simulated max
-        "rain_7d_mm": weather_raw.get("rain_1h", 0) * 24 * 7 if "rain_1h" in weather_raw else 0, # Rough estimate
-        "humidity_pct": weather_raw.get("humidity", 50),
-        "original_data": weather_raw
+        "tmin_c": weather_raw.get("tmin_c") if weather_ok else None,
+        "tmax_c": weather_raw.get("tmax_c") if weather_ok else None,
+        "rain_7d_mm": weather_raw.get("rain_7d_mm") if weather_ok else None,
+        "humidity_pct": weather_raw.get("humidity") if weather_ok else None,
+        "available": weather_ok,
+        "source": weather_raw.get("source"),
     }
 
-    # Transform soil data if necessary (soil service seems to match mostly)
-    # Frontend expects: ph, oc_pct, texture
+    soil_ok = "error" not in soil_raw
     soil_transformed = {
-        "ph": soil_raw.get("ph", 6.5),
-        "oc_pct": soil_raw.get("organic_carbon_pct", 0.5), # Service returns organic_carbon_pct
-        "texture": soil_raw.get("texture", "loam"),
-        "original_data": soil_raw
+        "ph": soil_raw.get("ph") if soil_ok else None,
+        "oc_pct": soil_raw.get("organic_carbon_pct") if soil_ok else None,
+        "texture": soil_raw.get("texture") if soil_ok else None,
+        "available": soil_ok,
+        "source": soil_raw.get("source") if soil_ok else None,
     }
 
     return {
