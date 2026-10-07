@@ -58,7 +58,7 @@ GRID = [
 
 def make_model(**params):
     return HistGradientBoostingRegressor(
-        loss="squared_error",
+        loss="absolute_error",  # L1 in log space: optimises the median % error we report
         max_iter=1500,
         categorical_features="from_dtype",
         early_stopping=False,  # iterations are chosen on our own time-based validation years
@@ -108,9 +108,9 @@ def main():
     best = None
     for params in GRID:
         probe = make_model(**params).fit(Xtr, train["target"])
-        curve = [np.mean((p - valid["target"]) ** 2) for p in probe.staged_predict(Xva)]
+        curve = [np.mean(np.abs(p - valid["target"])) for p in probe.staged_predict(Xva)]
         i = int(np.argmin(curve))
-        print(f"  {params} -> best iter {i + 1}, valid MSE {curve[i]:.5f}")
+        print(f"  {params} -> best iter {i + 1}, valid MAE(log) {curve[i]:.5f}")
         if best is None or curve[i] < best[0]:
             best = (curve[i], params, i + 1)
     _, best_params, best_iter = best
@@ -119,28 +119,55 @@ def main():
     model = make_model(**best_params).set_params(max_iter=best_iter)
     model.fit(Xtr, train["target"])
 
+    # ── Blend with the per-crop/season drift baseline ──
+    # The drift baseline (district history + the typical change seen in training years) is very hard
+    # to beat on median error; the weather-aware model adds sensitivity to extreme years. The blend
+    # weight is chosen on the validation years only.
+    def drift_table(frame):
+        return frame.groupby(["crop", "season"])["target"].median().to_dict()
+
+    def drift_of(frame, table):
+        return np.array([table.get((c, s), 0.0) for c, s in zip(frame["crop"], frame["season"])])
+
+    drift_train = drift_table(train)
+    valid_pre = to_climatology(valid, clim)
+    Xva_pre = prepare(valid_pre, categories)
+    delta_va_pre = model.predict(Xva_pre)
+
+    def median_ape(frame, delta):
+        yt = frame["yield_t_ha"].values
+        return float(np.median(np.abs(np.exp(frame["hist_log_yield"].values + delta) - yt) / yt) * 100)
+
+    blend_scores = {}
+    for w in (0.0, 0.25, 0.5, 0.75, 1.0):
+        blend_scores[w] = median_ape(valid, w * delta_va_pre + (1 - w) * drift_of(valid, drift_train))
+    blend_w = min(blend_scores, key=blend_scores.get)
+    print("blend weight on model -> valid median APE:", {k: round(v, 2) for k, v in blend_scores.items()},
+          "chosen", blend_w)
+
+    def blended(frame, X):
+        return blend_w * model.predict(X) + (1 - blend_w) * drift_of(frame, drift_train)
+
     # ── Prediction intervals: empirical residual quantiles on validation, per crop ──
     def residual_quantiles(frame, X):
-        res = frame["target"].values - model.predict(X)  # residual in log space
+        res = frame["target"].values - blended(frame, X)  # residual in log space
         q = pd.DataFrame({"crop": frame["crop"].values, "res": res}).groupby("crop")["res"]
         per_crop = q.quantile(0.1).to_frame("q10").join(q.quantile(0.9).to_frame("q90")).to_dict("index")
         return per_crop, {"q10": float(np.quantile(res, 0.1)), "q90": float(np.quantile(res, 0.9))}
 
     pi_actual, pi_actual_all = residual_quantiles(valid, Xva)
-    valid_pre = to_climatology(valid, clim)
-    pi_pre, pi_pre_all = residual_quantiles(valid_pre, prepare(valid_pre, categories))
+    pi_pre, pi_pre_all = residual_quantiles(valid_pre, Xva_pre)
 
     # ── Test evaluation ──
     y = test["yield_t_ha"].values
     base = test["hist_log_yield"].values
-    pred_actual = np.exp(base + model.predict(Xte))
+    pred_actual = np.exp(base + blended(test, Xte))
     test_pre = to_climatology(test, clim)
-    pred_pre = np.exp(base + model.predict(prepare(test_pre, categories)))
+    pred_pre = np.exp(base + blended(test, prepare(test_pre, categories)))
     b1 = np.exp(test["hist_log_yield"].values)
     b2 = np.exp(test["state_hist_log_yield"].fillna(test["hist_log_yield"]).values)
     # B3: district history + typical per-crop/season drift learnt on train years (trend only, no weather)
-    drift = train.groupby(["crop", "season"])["target"].median()
-    b3 = np.exp(base + pd.Series(list(zip(test["crop"], test["season"]))).map(drift).fillna(0).values)
+    b3 = np.exp(base + drift_of(test, drift_train))
 
     q10 = test["crop"].map(lambda c: pi_pre.get(c, pi_pre_all)["q10"]).values
     q90 = test["crop"].map(lambda c: pi_pre.get(c, pi_pre_all)["q90"]).values
@@ -157,6 +184,7 @@ def main():
         "n_iter": best_iter,
         "hyperparameters": best_params,
         "target": "log(yield) - district hist_log_yield",
+        "blend": {"model_weight": blend_w, "valid_median_APE_by_weight": {str(k): round(v, 2) for k, v in blend_scores.items()}},
         "test_overall": {
             "model_actual_weather": metrics(y, pred_actual),
             "model_pre_season": metrics(y, pred_pre),
@@ -195,6 +223,8 @@ def main():
         "categories": categories,
         "interval_pre_season": {"per_crop": pi_pre, "all": pi_pre_all},
         "interval_actual_weather": {"per_crop": pi_actual, "all": pi_actual_all},
+        "blend_model_weight": blend_w,
+        "drift": {f"{c}|{se}": float(v) for (c, se), v in drift_table(full).items()},
         "latest_data_year": int(df["year"].max()),
         "trained_on_years": f"{int(df.year.min())}-{int(df.year.max())}",
     }

@@ -326,7 +326,10 @@ def _predict_one(district, crop, season, ag_year, weather_feats, basis):
     X = pd.DataFrame([row])[FEATURE_COLS]
     for c in CATEGORICAL_COLS:
         X[c] = pd.Categorical(X[c], categories=r["meta"]["categories"][c])
-    log_pred = hist["hist_log_yield"] + float(r["model"].predict(X)[0])
+    # Blend the weather-aware model with the per-crop/season drift baseline (weight chosen in training).
+    w = r["meta"].get("blend_model_weight", 1.0)
+    drift = r["meta"].get("drift", {}).get(f"{crop}|{season}", 0.0)
+    log_pred = hist["hist_log_yield"] + w * float(r["model"].predict(X)[0]) + (1 - w) * drift
 
     # Interval: blend pre-season and actual-weather residual quantiles by fraction of season observed.
     frac = basis["months_observed"] / basis["months_in_season"]
