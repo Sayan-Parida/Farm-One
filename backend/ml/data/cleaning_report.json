@@ -1,0 +1,11 @@
+{
+  "raw_rows": 455359,
+  "drop_total_season_rows": 48044,
+  "drop_not_modelled_crop": 129474,
+  "drop_small_area_or_zero_production": 68827,
+  "drop_above_agronomic_max": 224,
+  "drop_series_jump_outlier": 1671,
+  "clean_rows": 207119,
+  "rows_with_coords_and_weather": 207119,
+  "rows_with_district_history": 138177
+}
