@@ -1,0 +1,741 @@
+district_code,district,state,old_lat,old_lon,new_lat,new_lon,moved_km,match,status
+1,Anantnag,Jammu And Kashmir,33.8096849,75.2494527,33.8096849,75.2494527,0.0,"Anantnag, Jammu and Kashmir, India",verified
+2,Budgam,Jammu And Kashmir,33.9098746,74.6270357,33.9098746,74.6270357,0.0,"Budgam, Jammu and Kashmir, India",verified
+3,Baramulla,Jammu And Kashmir,34.1774032,74.3150048,34.1774032,74.3150048,0.0,"Baramulla, Jammu and Kashmir, India",verified
+4,Doda,Jammu And Kashmir,33.1341373,75.587915,33.1341373,75.587915,0.0,"Doda, Jammu and Kashmir, India",verified
+5,Jammu,Jammu And Kashmir,32.7681864,74.9211318,32.7681864,74.9211318,0.0,"Jammu district, Jammu and Kashmir, India",verified
+6,Kargil,Ladakh,33.802819,76.4730096,33.802819,76.4730096,0.0,"Kargil district, Ladakh, India",verified
+7,Kathua,Jammu And Kashmir,32.5825837,75.6104797,32.5825837,75.6104797,0.0,"Kathua district, Jammu and Kashmir, India",verified
+8,Kupwara,Jammu And Kashmir,34.5140696,74.191367,34.5140696,74.191367,0.0,"Kupwara, Jammu and Kashmir, India",verified
+9,Leh Ladakh,Ladakh,34.1527738,77.5756127,,,,,unverified (kept old point)
+10,Poonch,Jammu And Kashmir,33.702939,74.2499015,33.702939,74.2499015,0.0,"Poonch, Jammu and Kashmir, India",verified
+11,Pulwama,Jammu And Kashmir,33.9490472,75.0418335,33.9490472,75.0418335,0.0,"Pulwama, Jammu and Kashmir, India",verified
+12,Rajouri,Jammu And Kashmir,33.2663678,74.343847,33.2663678,74.343847,0.0,"Rajouri, Jammu and Kashmir, India",verified
+13,Srinagar,Jammu And Kashmir,34.1178785,74.9659189,34.1178785,74.9659189,0.0,"Srinagar, Jammu and Kashmir, India",verified
+14,Udhampur,Jammu And Kashmir,32.911964,75.3265845,32.911964,75.3265845,0.0,"Udhampur district, Jammu and Kashmir, India",verified
+15,Bilaspur,Himachal Pradesh,31.3380959,76.7611631,31.3380959,76.7611631,0.0,"Bilaspur, Himachal Pradesh, India",verified
+16,Chamba,Himachal Pradesh,32.6923316,76.1631552,32.6923316,76.1631552,0.0,"Chamba, Himachal Pradesh, India",verified
+17,Hamirpur,Himachal Pradesh,31.6539866,76.5403633,31.6539866,76.5403633,0.0,"Hamirpur, Himachal Pradesh, India",verified
+18,Kangra,Himachal Pradesh,32.0768665,76.2985872,32.0768665,76.2985872,0.0,"Kangra, Himachal Pradesh, India",verified
+19,Kinnaur,Himachal Pradesh,31.593013,78.3281417,31.593013,78.3281417,0.0,"Kinnaur, Himachal Pradesh, India",verified
+20,Kullu,Himachal Pradesh,31.8778325,77.4495659,31.8778325,77.4495659,0.0,"Kullu, Himachal Pradesh, India",verified
+21,Lahaul And Spiti,Himachal Pradesh,32.5015861,77.5789891,32.5015861,77.5789891,0.0,"Lahaul and Spiti, Himachal Pradesh, India",verified
+22,Mandi,Himachal Pradesh,31.6516617,77.0092542,31.6516617,77.0092542,0.0,"Mandi, Himachal Pradesh, India",verified
+23,Shimla,Himachal Pradesh,31.2387672,77.7185684,31.2387672,77.7185684,0.0,"Shimla, Himachal Pradesh, India",verified
+24,Sirmaur,Himachal Pradesh,30.6991321,77.4465304,30.6991321,77.4465304,0.0,"Sirmaur, Himachal Pradesh, India",verified
+25,Solan,Himachal Pradesh,31.0568119,76.850301,31.0568119,76.850301,0.0,"Solan, Himachal Pradesh, India",verified
+26,Una,Himachal Pradesh,31.5834642,76.2351452,31.5834642,76.2351452,0.0,"Una, Himachal Pradesh, India",verified
+27,Amritsar,Punjab,31.7685759,74.8315603,31.7685759,74.8315603,0.0,"Amritsar, Punjab, India",verified
+28,Bathinda,Punjab,30.1794814,75.0471098,30.1794814,75.0471098,0.0,"Bathinda, Punjab, India",verified
+29,Faridkot,Punjab,30.6014507,74.7950176,30.6014507,74.7950176,0.0,"Faridkot, Punjab, India",verified
+30,Fatehgarh Sahib,Punjab,30.6634042,76.3803,30.6634042,76.3803,0.0,"Fatehgarh Sahib, Punjab, India",verified
+31,Ferozepur,Punjab,30.8978718,75.8161212,,,,,unverified (kept old point)
+32,Gurdaspur,Punjab,31.9037264,75.2275587,31.9037264,75.2275587,0.0,"Gurdaspur, Punjab, India",verified
+33,Hoshiarpur,Punjab,31.6092942,75.8459754,31.6092942,75.8459754,0.0,"Hoshiarpur, Punjab, India",verified
+34,Jalandhar,Punjab,31.2922312,75.5678878,31.2922312,75.5678878,0.0,"Jalandhar, Punjab, India",verified
+35,Kapurthala,Punjab,31.3856476,75.3053304,31.3856476,75.3053304,0.0,"Kapurthala, Punjab, India",verified
+36,Ludhiana,Punjab,30.789407,75.8269724,30.789407,75.8269724,0.0,"Ludhiana, Punjab, India",verified
+37,Mansa,Punjab,29.8764133,75.4889564,29.8764133,75.4889564,0.0,"Mansa, Punjab, India",verified
+38,Moga,Punjab,30.7877554,75.159359,30.7877554,75.159359,0.0,"Moga, Punjab, India",verified
+39,Sri Muktsar Sahib,Punjab,30.2867162,74.5262234,30.2867162,74.5262234,0.0,"Sri Muktsar Sahib, Punjab, India",verified
+40,Shahid Bhagat Singh Nagar,Punjab,31.126969,76.1598988,31.126969,76.1598988,0.0,"Shaheed Bhagat Singh Nagar, Punjab, India",verified
+41,Patiala,Punjab,30.2092778,76.3397231,30.2092778,76.3397231,0.0,"Patiala, Punjab, India",verified
+42,Rupnagar,Punjab,31.0917102,76.5289701,31.0917102,76.5289701,0.0,"Rupnagar, Punjab, India",verified
+43,Sangrur,Punjab,30.135717,75.8533326,30.135717,75.8533326,0.0,"Sangrur, Punjab, India",verified
+44,Chandigarh,Chandigarh,30.729844,76.7841457,30.729844,76.7841457,0.0,"Chandigarh, India",verified
+45,Almora,Uttarakhand,29.702651,79.4326318,29.702651,79.4326318,0.0,"Almora, Uttarakhand, India",verified
+46,Bageshwar,Uttarakhand,30.0087902,79.9280183,30.0087902,79.9280183,0.0,"Bageshwar, Uttarakhand, India",verified
+47,Chamoli,Uttarakhand,30.4985956,79.6190537,30.4985956,79.6190537,0.0,"Chamoli, Uttarakhand, India",verified
+48,Champawat,Uttarakhand,29.235032,80.1023068,29.235032,80.1023068,0.0,"Champawat, Uttarakhand, India",verified
+49,Dehradun,Uttarakhand,30.4998157,77.8625457,30.4998157,77.8625457,0.0,"Dehradun, Uttarakhand, India",verified
+50,Haridwar,Uttarakhand,29.9123514,78.0087178,29.9123514,78.0087178,0.0,"Haridwar, Uttarakhand, India",verified
+51,Nainital,Uttarakhand,29.294995,79.4162511,29.294995,79.4162511,0.0,"Nainital, Uttarakhand, India",verified
+52,Pauri Garhwal,Uttarakhand,29.8473168,78.7070479,29.8473168,78.7070479,0.0,"Pauri Garhwal, Uttarakhand, India",verified
+53,Pithoragarh,Uttarakhand,30.1264975,80.4816989,30.1264975,80.4816989,0.0,"Pithoragarh district, Uttarakhand, India",verified
+54,Rudraprayag,Uttarakhand,30.4915835,79.0366067,30.4915835,79.0366067,0.0,"Rudraprayag, Uttarakhand, India",verified
+55,Tehri Garhwal,Uttarakhand,30.4658181,78.4837349,30.4658181,78.4837349,0.0,"Tehri Garhwal, Uttarakhand, India",verified
+56,Udham Singh Nagar,Uttarakhand,29.0478314,79.4326164,29.0478314,79.4326164,0.0,"Udham Singh Nagar, Uttarakhand, India",verified
+57,Uttarkashi,Uttarakhand,30.9635733,78.6362521,30.9635733,78.6362521,0.0,"Uttarkashi, Uttarakhand, India",verified
+58,Ambala,Haryana,30.3435002,76.9493554,30.3435002,76.9493554,0.0,"Ambala, Haryana, India",verified
+59,Bhiwani,Haryana,28.7328101,75.8928296,28.7328101,75.8928296,0.0,"Bhiwani, Haryana, India",verified
+60,Faridabad,Haryana,28.3568524,77.3264937,28.3568524,77.3264937,0.0,"Faridabad, Haryana, India",verified
+61,Fatehabad,Haryana,29.5359209,75.5752901,29.5359209,75.5752901,0.0,"Fatehabad, Haryana, India",verified
+62,Gurugram,Haryana,28.4492944,77.0306587,28.4646148,77.0299194,1.7,"Gurugram, Haryana, India",verified
+63,Hisar,Haryana,29.2396596,75.8174505,29.2396596,75.8174505,0.0,"Hisar, Haryana, India",verified
+64,Jhajjar,Haryana,28.5964461,76.6505366,28.5964461,76.6505366,0.0,"Jhajjar, Haryana, India",verified
+65,Jind,Haryana,29.4494987,76.3736217,29.4494987,76.3736217,0.0,"Jind, Haryana, India",verified
+66,Kaithal,Haryana,29.8536764,76.4684323,29.8536764,76.4684323,0.0,"Kaithal, Haryana, India",verified
+67,Karnal,Haryana,29.7255766,76.9106924,29.7255766,76.9106924,0.0,"Karnal, Haryana, India",verified
+68,Kurukshetra,Haryana,30.0606702,76.7631053,30.0606702,76.7631053,0.0,"Kurukshetra, Haryana, India",verified
+69,Mahendragarh,Haryana,28.1326971,76.1697448,28.1326971,76.1697448,0.0,"Mahendragarh, Haryana, India",verified
+70,Panchkula,Haryana,30.689535,76.9947922,30.689535,76.9947922,0.0,"Panchkula, Haryana, India",verified
+71,Panipat,Haryana,29.3472909,76.8871622,29.3472909,76.8871622,0.0,"Panipat, Haryana, India",verified
+72,Rewari,Haryana,28.2180521,76.5816859,28.2180521,76.5816859,0.0,"Rewari, Haryana, India",verified
+73,Rohtak,Haryana,28.8900602,76.5873106,28.8900602,76.5873106,0.0,"Rohtak, Haryana, India",verified
+74,Sirsa,Haryana,29.6063041,74.9036568,29.6063041,74.9036568,0.0,"Sirsa, Haryana, India",verified
+75,Sonipat,Haryana,29.0414186,76.922715,29.0414186,76.922715,0.0,"Sonipat, Haryana, India",verified
+76,Yamunanagar,Haryana,30.2158611,77.3256507,30.2158611,77.3256507,0.0,"Yamunanagar, Haryana, India",verified
+86,Ajmer,Rajasthan,26.3318872,74.7169752,26.3318872,74.7169752,0.0,"Ajmer, Rajasthan, India",verified
+87,Alwar,Rajasthan,27.4140049,76.6170387,27.4140049,76.6170387,0.0,"Alwar, Rajasthan, India",verified
+88,Banswara,Rajasthan,23.4915047,74.3502172,23.4915047,74.3502172,0.0,"Banswara, Rajasthan, India",verified
+89,Baran,Rajasthan,24.9208165,76.6821985,24.9208165,76.6821985,0.0,"Baran, Rajasthan, India",verified
+90,Barmer,Rajasthan,25.5814853,71.1924922,25.5814853,71.1924922,0.0,"Barmer, Rajasthan, India",verified
+91,Bharatpur,Rajasthan,27.0246959,77.2920116,27.0246959,77.2920116,0.0,"Bharatpur, Rajasthan, India",verified
+92,Bhilwara,Rajasthan,25.470994,74.6961316,25.470994,74.6961316,0.0,"Bhilwara, Rajasthan, India",verified
+93,Bikaner,Rajasthan,28.1161617,73.110567,28.1161617,73.110567,0.0,"Bikaner, Rajasthan, India",verified
+94,Bundi,Rajasthan,25.4367659,75.7361471,25.4367659,75.7361471,0.0,"Bundi, Rajasthan, India",verified
+95,Chittorgarh,Rajasthan,24.7171578,74.4718129,24.7171578,74.4718129,0.0,"Chittorgarh, Rajasthan, India",verified
+96,Churu,Rajasthan,28.2047781,74.6912996,28.2047781,74.6912996,0.0,"Churu, Rajasthan, India",verified
+97,Dausa,Rajasthan,26.8048659,76.4437457,26.8048659,76.4437457,0.0,"Dausa, Rajasthan, India",verified
+98,Dholpur,Rajasthan,26.7010642,77.896749,26.7010642,77.896749,0.0,"Dhaulpur, Dhaulpur Tehsil, Dhaulpur, Rajasthan, 328001, India",verified
+99,Dungarpur,Rajasthan,23.6723053,73.8166419,23.6723053,73.8166419,0.0,"Dungarpur, Rajasthan, India",verified
+100,Ganganagar,Rajasthan,29.5,74.0,29.5,74.0,0.0,"Gangānagar, Hanumangarh, Rajasthan, India",verified
+101,Hanumangarh,Rajasthan,29.3659533,74.298429,29.3659533,74.298429,0.0,"Hanumangarh, Rajasthan, India",verified
+102,Jaipur,Rajasthan,26.9784335,75.7122089,26.9784335,75.7122089,0.0,"Jaipur, Rajasthan, India",verified
+103,Jaisalmer,Rajasthan,27.0264162,70.777512,27.0264162,70.777512,0.0,"Jaisalmer, Rajasthan, India",verified
+104,Jalore,Rajasthan,25.2093482,72.3178889,25.2093482,72.3178889,0.0,"Jalore, Rajasthan, India",verified
+105,Jhalawar,Rajasthan,24.3132368,76.5221078,24.3132368,76.5221078,0.0,"Jhalawar, Rajasthan, India",verified
+106,Jhunjhunu,Rajasthan,28.0798944,75.5424211,28.0798944,75.5424211,0.0,"Jhunjhunu, Rajasthan, India",verified
+107,Jodhpur,Rajasthan,26.410532,72.9646645,26.410532,72.9646645,0.0,"Jodhpur, Rajasthan, India",verified
+108,Karauli,Rajasthan,26.5158329,77.0565965,26.5158329,77.0565965,0.0,"Karauli, Rajasthan, India",verified
+109,Kota,Rajasthan,25.196683,76.0009687,25.196683,76.0009687,0.0,"Kota, Rajasthan, India",verified
+110,Nagaur,Rajasthan,26.9873443,73.7389011,26.9873443,73.7389011,0.0,"Nagaur, Rajasthan, India",verified
+111,Pali,Rajasthan,25.4552211,73.419389,25.4552211,73.419389,0.0,"Pali, Rajasthan, India",verified
+112,Rajsamand,Rajasthan,25.2892459,73.8241077,25.2892459,73.8241077,0.0,"Rajsamand, Rajasthan, India",verified
+113,Sawai Madhopur,Rajasthan,26.2290186,76.3043561,26.2290186,76.3043561,0.0,"Sawai Madhopur, Rajasthan, India",verified
+114,Sikar,Rajasthan,27.6624156,75.0279971,27.6624156,75.0279971,0.0,"Sikar, Rajasthan, India",verified
+115,Sirohi,Rajasthan,24.8114047,72.8300257,24.8114047,72.8300257,0.0,"Sirohi, Rajasthan, India",verified
+116,Tonk,Rajasthan,26.1223198,75.6632235,26.1223198,75.6632235,0.0,"Tonk, Rajasthan, India",verified
+117,Udaipur,Rajasthan,24.453502,73.4070437,24.453502,73.4070437,0.0,"Udaipur, Rajasthan, India",verified
+118,Agra,Uttar Pradesh,27.0755504,77.8753832,27.0755504,77.8753832,0.0,"Agra, Uttar Pradesh, India",verified
+119,Aligarh,Uttar Pradesh,27.8761073,78.1358153,27.8761073,78.1358153,0.0,"Aligarh, Uttar Pradesh, India",verified
+120,Prayagraj,Uttar Pradesh,25.2793187,81.9034977,25.2793187,81.9034977,0.0,"Prayagraj, Uttar Pradesh, India",verified
+121,Ambedkar Nagar,Uttar Pradesh,26.4045941,82.6065154,26.4045941,82.6065154,0.0,"Ambedkar Nagar, Uttar Pradesh, India",verified
+122,Auraiya,Uttar Pradesh,26.6558215,79.5160757,26.6558215,79.5160757,0.0,"Auraiya, Uttar Pradesh, India",verified
+123,Azamgarh,Uttar Pradesh,26.023639,83.0293105,26.023639,83.0293105,0.0,"Azamgarh, Uttar Pradesh, India",verified
+124,Baghpat,Uttar Pradesh,29.0374779,77.3062737,29.0374779,77.3062737,0.0,"Baghpat, Uttar Pradesh, India",verified
+125,Bahraich,Uttar Pradesh,27.7343823,81.47654,27.7343823,81.47654,0.0,"Bahraich, Uttar Pradesh, India",verified
+126,Ballia,Uttar Pradesh,25.8749595,84.1210329,25.8749595,84.1210329,0.0,"Ballia, Uttar Pradesh, India",verified
+127,Balrampur,Uttar Pradesh,27.4476988,82.3956245,27.4476988,82.3956245,0.0,"Balrampur, Uttar Pradesh, India",verified
+128,Banda,Uttar Pradesh,25.4438537,80.5595237,25.4438537,80.5595237,0.0,"Banda, Uttar Pradesh, India",verified
+129,Bara Banki,Uttar Pradesh,26.9013312,81.2151601,26.9013312,81.2151601,0.0,"Bāra Banki, Barabanki, Uttar Pradesh, 222501, India",verified
+130,Bareilly,Uttar Pradesh,28.4582345,79.4047452,28.4582345,79.4047452,0.0,"Bareilly, Uttar Pradesh, India",verified
+131,Basti,Uttar Pradesh,26.8387083,82.5350919,26.8387083,82.5350919,0.0,"Basti, Uttar Pradesh, India",verified
+132,Bijnor,Uttar Pradesh,29.4074203,78.4821406,29.4074203,78.4821406,0.0,"Bijnor, Uttar Pradesh, India",verified
+133,Budaun,Uttar Pradesh,28.116667,78.983333,28.116667,78.983333,0.0,"Budaun, Badaun, Uttar Pradesh, 243633, India",verified
+134,Bulandshahr,Uttar Pradesh,28.3874073,77.9743805,28.3874073,77.9743805,0.0,"Bulandshahr, Uttar Pradesh, India",verified
+135,Chandauli,Uttar Pradesh,25.125695,83.2494601,25.125695,83.2494601,0.0,"Chandauli, Uttar Pradesh, India",verified
+136,Chitrakoot,Uttar Pradesh,25.217139,81.1045927,25.217139,81.1045927,0.0,"Chitrakoot, Uttar Pradesh, India",verified
+137,Deoria,Uttar Pradesh,26.4239911,83.7638578,26.4239911,83.7638578,0.0,"Deoria, Uttar Pradesh, India",verified
+138,Etah,Uttar Pradesh,27.5550357,78.5992221,27.5550357,78.5992221,0.0,"Etah, Uttar Pradesh, India",verified
+139,Etawah,Uttar Pradesh,26.7155629,79.0917098,26.7155629,79.0917098,0.0,"Etawah, Uttar Pradesh, India",verified
+140,Ayodhya,Uttar Pradesh,26.6382763,82.0585034,26.6382763,82.0585034,0.0,"Ayodhya, Uttar Pradesh, India",verified
+141,Farrukhabad,Uttar Pradesh,27.4362003,79.4894778,27.4362003,79.4894778,0.0,"Farrukhabad, Uttar Pradesh, India",verified
+142,Fatehpur,Uttar Pradesh,25.8348023,80.9154547,25.8348023,80.9154547,0.0,"Fatehpur, Uttar Pradesh, India",verified
+143,Firozabad,Uttar Pradesh,27.1941954,78.4604956,27.1941954,78.4604956,0.0,"Firozabad, Uttar Pradesh, India",verified
+144,Gautam Buddha Nagar,Uttar Pradesh,28.368716,77.5970121,28.368716,77.5970121,0.0,"Gautam Buddha Nagar, Uttar Pradesh, India",verified
+145,Ghaziabad,Uttar Pradesh,28.7749966,77.4586967,28.7749966,77.4586967,0.0,"Ghaziabad, Uttar Pradesh, India",verified
+146,Ghazipur,Uttar Pradesh,25.6034863,83.5075888,25.6034863,83.5075888,0.0,"Ghazipur, Uttar Pradesh, India",verified
+147,Gonda,Uttar Pradesh,27.1103723,81.9238906,27.1103723,81.9238906,0.0,"Gonda, Uttar Pradesh, India",verified
+148,Gorakhpur,Uttar Pradesh,26.6677977,83.3642334,26.6677977,83.3642334,0.0,"Gorakhpur, Uttar Pradesh, India",verified
+149,Hamirpur,Uttar Pradesh,25.75,80.0,25.75,80.0,0.0,"Hamirpur, Uttar Pradesh, India",verified
+150,Hardoi,Uttar Pradesh,27.3369978,80.0998232,27.3369978,80.0998232,0.0,"Hardoi, Uttar Pradesh, India",verified
+151,Jalaun,Uttar Pradesh,26.1048633,79.3919136,26.1048633,79.3919136,0.0,"Jalaun, Uttar Pradesh, India",verified
+152,Jaunpur,Uttar Pradesh,25.7967065,82.4888992,25.7967065,82.4888992,0.0,"Jaunpur, Uttar Pradesh, India",verified
+153,Jhansi,Uttar Pradesh,25.529855,78.6527802,25.529855,78.6527802,0.0,"Jhansi, Uttar Pradesh, India",verified
+154,Amroha,Uttar Pradesh,28.7952632,78.3436244,28.7952632,78.3436244,0.0,"Amroha, Uttar Pradesh, India",verified
+155,Kannauj,Uttar Pradesh,26.9986675,79.6927946,26.9986675,79.6927946,0.0,"Kannauj, Uttar Pradesh, India",verified
+156,Kanpur Dehat,Uttar Pradesh,26.4585639,79.8548052,26.4585639,79.8548052,0.0,"Kanpur Dehat, Uttar Pradesh, India",verified
+157,Kanpur Nagar,Uttar Pradesh,26.4410107,80.2652803,26.4410107,80.2652803,0.0,"Kanpur Nagar, Uttar Pradesh, India",verified
+158,Kaushambi,Uttar Pradesh,25.5342456,81.4493567,25.5342456,81.4493567,0.0,"Kaushambi, Uttar Pradesh, India",verified
+159,Kheri,Uttar Pradesh,28.116667,80.716667,28.116667,80.716667,0.0,"Kheri, Lakhimpur Kheri, Uttar Pradesh, India",verified
+160,Kushinagar,Uttar Pradesh,26.9242612,83.8324465,26.9242612,83.8324465,0.0,"Kushinagar, Uttar Pradesh, India",verified
+161,Lalitpur,Uttar Pradesh,24.6999688,78.51862,24.6999688,78.51862,0.0,"Lalitpur, Uttar Pradesh, India",verified
+162,Lucknow,Uttar Pradesh,26.8312463,80.9174154,26.8312463,80.9174154,0.0,"Lucknow, Uttar Pradesh, India",verified
+163,Hathras,Uttar Pradesh,27.5724324,78.1116209,27.5724324,78.1116209,0.0,"Hathras, Uttar Pradesh, India",verified
+164,Mahrajganj,Uttar Pradesh,27.1837263,83.4917301,27.1837263,83.4917301,0.0,"Mahrajganj, Uttar Pradesh, India",verified
+165,Mahoba,Uttar Pradesh,25.3615938,79.706011,25.3615938,79.706011,0.0,"Mahoba, Uttar Pradesh, India",verified
+166,Mainpuri,Uttar Pradesh,27.2093072,79.0625369,27.2093072,79.0625369,0.0,"Mainpuri, Uttar Pradesh, India",verified
+167,Mathura,Uttar Pradesh,27.633333,77.583333,27.633333,77.583333,0.0,"Mathura, Uttar Pradesh, India",verified
+168,Mau,Uttar Pradesh,26.0390905,83.4985846,26.0390905,83.4985846,0.0,"Mau, Uttar Pradesh, India",verified
+169,Meerut,Uttar Pradesh,29.0018557,77.7679671,29.0018557,77.7679671,0.0,"Meerut, Uttar Pradesh, India",verified
+170,Mirzapur,Uttar Pradesh,24.9316896,82.6280163,24.9316896,82.6280163,0.0,"Mirzapur, Uttar Pradesh, India",verified
+171,Moradabad,Uttar Pradesh,28.8796553,78.8095335,28.8796553,78.8095335,0.0,"Moradabad, Uttar Pradesh, India",verified
+172,Muzaffarnagar,Uttar Pradesh,29.4496979,77.7429333,29.4496979,77.7429333,0.0,"Muzaffarnagar, Uttar Pradesh, India",verified
+173,Pilibhit,Uttar Pradesh,28.4947158,80.1076122,28.4947158,80.1076122,0.0,"Pilibhit, Uttar Pradesh, India",verified
+174,Pratapgarh,Uttar Pradesh,25.75,81.75,25.75,81.75,0.0,"Pratapgarh, Uttar Pradesh, India",verified
+175,Rae Bareli,Uttar Pradesh,26.25,81.25,26.25,81.25,0.0,"Rāe Bareli, Raebareli, Uttar Pradesh, India",verified
+176,Rampur,Uttar Pradesh,28.7934728,79.1845806,28.7934728,79.1845806,0.0,"Rampur, Uttar Pradesh, India",verified
+177,Saharanpur,Uttar Pradesh,29.9856799,77.5040646,29.9856799,77.5040646,0.0,"Saharanpur, Uttar Pradesh, India",verified
+178,Sant Kabir Nagar,Uttar Pradesh,26.755082,83.0398545,26.755082,83.0398545,0.0,"Sant Kabir Nagar, Uttar Pradesh, India",verified
+179,Bhadohi,Uttar Pradesh,25.3627897,82.6846939,25.424304,82.4883923,20.9,"Bhadohi, Sant Ravidas Nagar, Uttar Pradesh, India",verified
+180,Shahjahanpur,Uttar Pradesh,27.9128583,79.7476254,27.9128583,79.7476254,0.0,"Shahjahanpur, Uttar Pradesh, India",verified
+181,Shrawasti,Uttar Pradesh,27.5083429,82.0263569,,,,,unverified (kept old point)
+182,Siddharthnagar,Uttar Pradesh,27.2511724,82.8716528,27.2511724,82.8716528,0.0,"Siddharthnagar, Uttar Pradesh, India",verified
+183,Sitapur,Uttar Pradesh,27.5026748,80.8335139,27.5026748,80.8335139,0.0,"Sitapur, Uttar Pradesh, India",verified
+184,Sonbhadra,Uttar Pradesh,24.4148159,83.0637517,24.4148159,83.0637517,0.0,"Sonbhadra, Uttar Pradesh, India",verified
+185,Sultanpur,Uttar Pradesh,26.2604732,82.2380532,26.2604732,82.2380532,0.0,"Sultanpur, Uttar Pradesh, India",verified
+186,Unnao,Uttar Pradesh,26.5673264,80.6198193,26.5673264,80.6198193,0.0,"Unnao, Uttar Pradesh, India",verified
+187,Varanasi,Uttar Pradesh,25.3719338,82.9414272,25.3719338,82.9414272,0.0,"Varanasi, Uttar Pradesh, India",verified
+188,Araria,Bihar,26.2651013,87.3699437,26.2651013,87.3699437,0.0,"Araria District, Bihar, India",verified
+189,Aurangabad,Bihar,24.8033201,84.4110198,24.8033201,84.4110198,0.0,"Aurangabad, Bihar, India",verified
+190,Banka,Bihar,24.8328273,86.8161114,24.8328273,86.8161114,0.0,"Banka, Bihar, India",verified
+191,Begusarai,Bihar,25.5125411,86.0883392,25.5125411,86.0883392,0.0,"Begusarai, Bihar, India",verified
+192,Bhagalpur,Bihar,25.2861354,87.1304229,25.2861354,87.1304229,0.0,"Bhagalpur, Bihar, India",verified
+193,Bhojpur,Bihar,25.4501182,84.5635193,25.4501182,84.5635193,0.0,"Bhojpur, Bihar, India",verified
+194,Buxar,Bihar,25.5044834,84.1097525,25.5044834,84.1097525,0.0,"Buxar, Bihar, India",verified
+195,Darbhanga,Bihar,26.0829899,86.0324951,26.0829899,86.0324951,0.0,"Darbhanga, Bihar, India",verified
+196,Gaya,Bihar,24.679389,85.0115833,24.679389,85.0115833,0.0,"Gaya, Bihar, India",verified
+197,Gopalganj,Bihar,26.4211166,84.3739133,26.4211166,84.3739133,0.0,"Gopalganj, Bihar, India",verified
+198,Jamui,Bihar,24.7562514,86.3011128,24.7562514,86.3011128,0.0,"Jamui, Bihar, India",verified
+199,Jehanabad,Bihar,25.1529579,85.0065043,25.1529579,85.0065043,0.0,"Jehanabad, Bihar, India",verified
+200,Kaimur (Bhabua),Bihar,25.0398678,83.6085775,,,,,unverified (kept old point)
+201,Katihar,Bihar,25.5586421,87.6457196,25.5586421,87.6457196,0.0,"Katihar, Bihar, India",verified
+202,Khagaria,Bihar,25.4930513,86.6982264,25.4930513,86.6982264,0.0,"Khagaria, Bihar, India",verified
+203,Kishanganj,Bihar,26.2984144,87.9466715,26.2984144,87.9466715,0.0,"Kishanganj, Bihar, India",verified
+204,Lakhisarai,Bihar,25.1543938,86.1744959,25.1543938,86.1744959,0.0,"Lakhisarai, Bihar, India",verified
+205,Madhepura,Bihar,25.7806118,86.9364753,25.7806118,86.9364753,0.0,"Madhepura, Bihar, India",verified
+206,Madhubani,Bihar,26.3503076,86.2296424,26.3503076,86.2296424,0.0,"Madhubani, Bihar, India",verified
+207,Munger,Bihar,25.2202864,86.5161484,25.2202864,86.5161484,0.0,"Munger, Bihar, India",verified
+208,Muzaffarpur,Bihar,26.1482548,85.3316097,26.1482548,85.3316097,0.0,"Muzaffarpur, Bihar, India",verified
+209,Nalanda,Bihar,25.211599,85.4484611,25.211599,85.4484611,0.0,"Nalanda, Bihar, India",verified
+210,Nawada,Bihar,24.8173249,85.5179085,24.8173249,85.5179085,0.0,"Nawada, Bihar, India",verified
+211,Pashchim Champaran,Bihar,27.0,84.5,27.0,84.5,0.0,"Pashchim Champāran, West Champaran, Bihar, India",verified
+212,Patna,Bihar,25.4680538,85.1952852,25.4680538,85.1952852,0.0,"Patna, Bihar, India",verified
+213,Purbi Champaran,Bihar,26.6465969,84.9091552,,,,,unverified (kept old point)
+214,Purnia,Bihar,25.7758723,87.4087667,25.7758723,87.4087667,0.0,"Purnia, Bihar, India",verified
+215,Rohtas,Bihar,24.9394143,84.0197031,24.9394143,84.0197031,0.0,"Rohtas, Bihar, India",verified
+216,Saharsa,Bihar,25.8330757,86.6143751,25.8330757,86.6143751,0.0,"Saharsa, Bihar, India",verified
+217,Samastipur,Bihar,25.7747885,85.8672314,25.7747885,85.8672314,0.0,"Samastipur, Bihar, India",verified
+218,Saran,Bihar,25.9214451,84.7759731,25.9214451,84.7759731,0.0,"Saran, Bihar, India",verified
+219,Sheikhpura,Bihar,25.1250741,85.8160771,25.1250741,85.8160771,0.0,"Sheikhpura, Bihar, India",verified
+220,Sheohar,Bihar,26.4934234,85.2717561,26.4934234,85.2717561,0.0,"Sheohar, Bihar, 843329, India",verified
+221,Sitamarhi,Bihar,26.5712894,85.6001549,26.5712894,85.6001549,0.0,"Sitamarhi, Bihar, India",verified
+222,Siwan,Bihar,26.131008,84.3910745,26.131008,84.3910745,0.0,"Siwan, Bihar, India",verified
+223,Supaul,Bihar,26.2768089,86.7959614,26.2768089,86.7959614,0.0,"Supaul, Bihar, India",verified
+224,Vaishali,Bihar,25.7491703,85.3972164,25.7491703,85.3972164,0.0,"Vaishali, Bihar, India",verified
+225,Gangtok,Sikkim,27.3257345,88.6983549,27.3257345,88.6983549,0.0,"Gangtok, Sikkim, India",verified
+226,Mangan,Sikkim,27.7497442,88.5212055,27.7497442,88.5212055,0.0,"Mangan, Sikkim, India",verified
+227,Namchi,Sikkim,27.3031019,88.3785961,27.3031019,88.3785961,0.0,"Namchi, Sikkim, India",verified
+228,Gyalshing,Sikkim,27.4185174,88.1808338,27.4185174,88.1808338,0.0,"Gyalshing, Sikkim, India",verified
+229,Changlang,Arunachal Pradesh,27.2698797,96.0602442,27.2698797,96.0602442,0.0,"Changlang, Arunachal Pradesh, India",verified
+230,Dibang Valley,Arunachal Pradesh,28.8291044,95.9554096,28.8291044,95.9554096,0.0,"Dibang Valley, Arunachal Pradesh, India",verified
+231,East Kameng,Arunachal Pradesh,27.557781,93.0753012,27.557781,93.0753012,0.0,"East Kameng, Arunachal Pradesh, 790102, India",verified
+232,East Siang,Arunachal Pradesh,28.0742219,95.4178149,28.0742219,95.4178149,0.0,"East Siang, Arunachal Pradesh, 791104, India",verified
+233,Kurung Kumey,Arunachal Pradesh,27.9863677,93.1578347,27.9863677,93.1578347,0.0,"Kurung Kumey, Arunachal Pradesh, 791118, India",verified
+234,Lohit,Arunachal Pradesh,28.0350162,96.1713515,28.0350162,96.1713515,0.0,"Lohit, Arunachal Pradesh, India",verified
+235,Lower Dibang Valley,Arunachal Pradesh,28.2149563,95.878774,28.2149563,95.878774,0.0,"Lower Dibang Valley, Arunachal Pradesh, 792110, India",verified
+236,Lower Subansiri,Arunachal Pradesh,27.6059753,93.8669707,27.6059753,93.8669707,0.0,"Lower Subansiri, Arunachal Pradesh, 791120, India",verified
+237,Papum Pare,Arunachal Pradesh,27.2863667,93.6187716,27.2863667,93.6187716,0.0,"Papum Pare, Arunachal Pradesh, India",verified
+238,Tawang,Arunachal Pradesh,27.6689525,91.9860059,27.6689525,91.9860059,0.0,"Tawang district, Arunachal Pradesh, India",verified
+239,Tirap,Arunachal Pradesh,27.030169,95.4979175,27.030169,95.4979175,0.0,"Tirap, Arunachal Pradesh, India",verified
+240,Upper Siang,Arunachal Pradesh,28.7312046,95.0377315,28.7312046,95.0377315,0.0,"Upper Siang, Arunachal Pradesh, India",verified
+241,Upper Subansiri,Arunachal Pradesh,28.2596054,94.0938106,28.2596054,94.0938106,0.0,"Upper Subansiri, Arunachal Pradesh, 791122, India",verified
+242,West Kameng,Arunachal Pradesh,27.2986936,92.4741211,27.2986936,92.4741211,0.0,"West Kameng, Arunachal Pradesh, India",verified
+243,West Siang,Arunachal Pradesh,28.1970922,94.48407,28.1970922,94.48407,0.0,"West Siang, Arunachal Pradesh, 791001, India",verified
+244,Dimapur,Nagaland,25.9041378,93.7177609,25.9041378,93.7177609,0.0,"Dimapur, Nagaland, India",verified
+245,Kohima,Nagaland,25.7169804,94.0982194,25.7169804,94.0982194,0.0,"Kohima, Nagaland, India",verified
+246,Mokokchung,Nagaland,26.4795861,94.5105275,26.4795861,94.5105275,0.0,"Mokokchung, Nagaland, India",verified
+247,Mon,Nagaland,26.666667,95.0,26.666667,95.0,0.0,"Mon, Nagaland, India",verified
+248,Phek,Nagaland,25.6700924,94.3843925,25.6700924,94.3843925,0.0,"Phek, Nagaland, India",verified
+249,Tuensang,Nagaland,26.2342107,94.741553,26.2342107,94.741553,0.0,"Tuensang, Nagaland, India",verified
+250,Wokha,Nagaland,26.242251,94.1921153,26.242251,94.1921153,0.0,"Wokha, Nagaland, India",verified
+251,Zunheboto,Nagaland,26.0123803,94.5123719,26.0123803,94.5123719,0.0,"Zünheboto, Nagaland, India",verified
+252,Bishnupur,Manipur,24.5263926,93.800487,24.5263926,93.800487,0.0,"Bishnupur district, Manipur, India",verified
+253,Chandel,Manipur,24.1700959,94.0059673,24.1700959,94.0059673,0.0,"Chandel district, Manipur, India",verified
+254,Churachandpur,Manipur,24.3095833,93.675022,24.3095833,93.675022,0.0,"Churachandpur district, Manipur, India",verified
+255,Imphal East,Manipur,24.8326698,94.0168859,24.8326698,94.0168859,0.0,"Imphal East, Manipur, India",verified
+256,Imphal West,Manipur,24.7590802,93.8617365,24.7590802,93.8617365,0.0,"Imphal West, Manipur, India",verified
+257,Senapati,Manipur,25.3933697,94.1501773,25.3933697,94.1501773,0.0,"Senapati, Manipur, India",verified
+258,Tamenglong,Manipur,25.0648711,93.5465432,25.0648711,93.5465432,0.0,"Tamenglong district, Manipur, India",verified
+259,Thoubal,Manipur,24.6203931,94.0104782,24.6203931,94.0104782,0.0,"Thoubal district, Manipur, India",verified
+260,Ukhrul,Manipur,25.3121261,94.4754982,25.3121261,94.4754982,0.0,"Ukhrul district, Manipur, India",verified
+261,Aizawl,Mizoram,23.8608788,92.864694,23.8608788,92.864694,0.0,"Aizawl, Mizoram, India",verified
+262,Champhai,Mizoram,23.5443743,93.3479506,23.5443743,93.3479506,0.0,"Champhai district, Mizoram, India",verified
+263,Kolasib,Mizoram,24.1905469,92.7136595,24.1905469,92.7136595,0.0,"Kolasib, Mizoram, India",verified
+264,Lawngtlai,Mizoram,22.3913377,92.7397189,22.3913377,92.7397189,0.0,"Lawngtlai, Mizoram, India",verified
+265,Lunglei,Mizoram,22.9519972,92.6336207,22.9519972,92.6336207,0.0,"Lunglei, Mizoram, India",verified
+266,Mamit,Mizoram,23.7564387,92.4515374,23.7564387,92.4515374,0.0,"Mamit, Mizoram, India",verified
+267,Siaha,Mizoram,22.4895876,92.9791567,,,,,unverified (kept old point)
+268,Serchhip,Mizoram,23.3052514,92.8455124,23.3052514,92.8455124,0.0,"Serchhip, Mizoram, India",verified
+269,Dhalai,Tripura,23.8253158,91.9732227,23.8253158,91.9732227,0.0,"Dhalai, Tripura, India",verified
+270,North Tripura,Tripura,24.0921476,92.2451214,24.0921476,92.2451214,0.0,"North Tripura, Tripura, India",verified
+271,South Tripura,Tripura,23.1708278,91.638817,23.1708278,91.638817,0.0,"South Tripura, Tripura, India",verified
+272,West Tripura,Tripura,23.9153329,91.3879341,23.9153329,91.3879341,0.0,"West Tripura, Tripura, India",verified
+273,East Garo Hills,Meghalaya,25.6184946,90.6342162,25.6184946,90.6342162,0.0,"East Garo Hills, Meghalaya, 794111, India",verified
+274,East Khasi Hills,Meghalaya,25.4023736,91.8317178,25.4023736,91.8317178,0.0,"East Khasi Hills, Meghalaya, India",verified
+275,West Jaintia Hills,Meghalaya,25.4425965,92.2988275,25.4425965,92.2988275,0.0,"West Jaintia Hills, Meghalaya, India",verified
+276,Ri Bhoi,Meghalaya,25.8764026,91.8567574,25.8764026,91.8567574,0.0,"Ri-Bhoi, Meghalaya, India",verified
+277,South Garo Hills,Meghalaya,25.347969,90.5657773,25.347969,90.5657773,0.0,"South Garo Hills, Meghalaya, India",verified
+278,West Garo Hills,Meghalaya,25.6065343,90.2038335,25.6065343,90.2038335,0.0,"West Garo Hills, Meghalaya, India",verified
+279,West Khasi Hills,Meghalaya,25.5814429,91.0851094,25.5814429,91.0851094,0.0,"West Khasi Hills, Meghalaya, 793119, India",verified
+280,Barpeta,Assam,26.345941,91.039708,26.345941,91.039708,0.0,"Barpeta, Assam, India",verified
+281,Bongaigaon,Assam,26.348883,90.6291434,26.348883,90.6291434,0.0,"Bongaigaon, Assam, India",verified
+282,Cachar,Assam,24.75864,92.8816648,24.75864,92.8816648,0.0,"Cachar, Assam, India",verified
+283,Darrang,Assam,26.4373481,92.0047145,26.4373481,92.0047145,0.0,"Darrang, Assam, India",verified
+284,Dhemaji,Assam,27.5945155,94.7192098,27.5945155,94.7192098,0.0,"Dhemaji, Assam, India",verified
+285,Dhubri,Assam,26.132275,90.1249962,26.132275,90.1249962,0.0,"Dhubri, Assam, India",verified
+286,Dibrugarh,Assam,27.400599,94.9950865,27.400599,94.9950865,0.0,"Dibrugarh, Assam, India",verified
+287,Goalpara,Assam,26.0491877,90.6001859,26.0491877,90.6001859,0.0,"Goalpara, Assam, India",verified
+288,Golaghat,Assam,26.3689557,94.0086553,26.3689557,94.0086553,0.0,"Golaghat, Assam, India",verified
+289,Hailakandi,Assam,24.5076094,92.6267589,24.5076094,92.6267589,0.0,"Hailakandi district, Assam, India",verified
+290,Jorhat,Assam,26.6500766,94.2700644,26.6500766,94.2700644,0.0,"Jorhat, Assam, India",verified
+291,Kamrup,Assam,26.1468861,91.2227397,26.1468861,91.2227397,0.0,"Kamrup, Assam, India",verified
+292,Karbi Anglong,Assam,26.0712781,93.4552969,26.0712781,93.4552969,0.0,"Karbi Anglong, Assam, India",verified
+293,Sribhumi,Assam,24.8720002,92.3598937,,,,,unverified (kept old point)
+294,Kokrajhar,Assam,26.4912104,90.1215209,26.4912104,90.1215209,0.0,"Kokrajhar, Assam, India",verified
+295,Lakhimpur,Assam,27.1763356,94.1992932,27.1763356,94.1992932,0.0,"Lakhimpur, Assam, India",verified
+296,Marigaon,Assam,26.290712,92.2922184,26.290712,92.2922184,0.0,"Marigaon, Assam, India",verified
+297,Nagaon,Assam,26.3313646,92.7524763,26.3313646,92.7524763,0.0,"Nagaon, Assam, India",verified
+298,Nalbari,Assam,26.3533632,91.3983662,26.3533632,91.3983662,0.0,"Nalbari, Assam, India",verified
+299,Dima Hasao,Assam,25.4003625,93.0752292,25.4003625,93.0752292,0.0,"Dima Hasao, Assam, India",verified
+300,Sivasagar,Assam,26.993972,94.6203887,26.993972,94.6203887,0.0,"Sivasagar, Assam, India",verified
+301,Sonitpur,Assam,26.7677707,92.7014089,26.7677707,92.7014089,0.0,"Sonitpur, Assam, India",verified
+302,Tinsukia,Assam,27.5971709,95.5668529,27.5971709,95.5668529,0.0,"Tinsukia, Assam, India",verified
+303,North 24 Parganas,West Bengal,22.6926815,88.6625795,22.6926815,88.6625795,0.0,"North 24 Parganas, West Bengal, India",verified
+304,South 24 Parganas,West Bengal,22.1776733,88.5307853,22.1776733,88.5307853,0.0,"South 24 Parganas, West Bengal, India",verified
+305,Bankura,West Bengal,23.132377,87.2081925,23.132377,87.2081925,0.0,"Bankura, West Bengal, India",verified
+306,Purba Bardhaman,West Bengal,23.388517,87.9068097,23.388517,87.9068097,0.0,"Purba Bardhaman, West Bengal, India",verified
+307,Birbhum,West Bengal,24.0621532,87.6982823,24.0621532,87.6982823,0.0,"Birbhum, West Bengal, India",verified
+308,Cooch Behar,West Bengal,26.2559197,89.4201143,26.2559197,89.4201143,0.0,"Cooch Behar, West Bengal, India",verified
+309,Darjeeling,West Bengal,26.8361645,88.3058878,26.8361645,88.3058878,0.0,"Darjeeling, West Bengal, India",verified
+310,Dakshin Dinajpur,West Bengal,25.385807,88.5063362,25.385807,88.5063362,0.0,"Dakshin Dinajpur, West Bengal, India",verified
+311,Uttar Dinajpur,West Bengal,25.8721428,87.961986,25.8721428,87.961986,0.0,"Uttar Dinajpur, West Bengal, India",verified
+312,Hooghly,West Bengal,22.9099402,88.0120825,22.9099402,88.0120825,0.0,"Hooghly, West Bengal, India",verified
+313,Howrah,West Bengal,22.4955651,88.0381478,22.4955651,88.0381478,0.0,"Howrah, West Bengal, India",verified
+314,Jalpaiguri,West Bengal,26.6262805,88.7334485,26.6262805,88.7334485,0.0,"Jalpaiguri, West Bengal, India",verified
+316,Malda,West Bengal,24.9268262,88.2574088,25.0057449,88.1398483,14.7,"Malda, English Bazar, Maldah, West Bengal, 732101, India",verified
+317,Purba Medinipur,West Bengal,22.0648451,87.8377586,22.0648451,87.8377586,0.0,"Purba Medinipur, West Bengal, India",verified
+318,Paschim Medinipur,West Bengal,22.3600119,87.4111505,22.3600119,87.4111505,0.0,"Paschim Medinipur, West Bengal, India",verified
+319,Murshidabad,West Bengal,24.2904032,88.366432,24.2904032,88.366432,0.0,"Murshidabad, West Bengal, India",verified
+320,Nadia,West Bengal,23.4847374,88.5567067,23.4847374,88.5567067,0.0,"Nadia, West Bengal, India",verified
+321,Purulia,West Bengal,23.2020967,86.3228988,23.2020967,86.3228988,0.0,"Purulia, West Bengal, India",verified
+322,Bokaro,Jharkhand,23.6991279,85.9910689,23.6991279,85.9910689,0.0,"Bokaro, Jharkhand, India",verified
+323,Chatra,Jharkhand,24.1062316,84.8623379,24.1062316,84.8623379,0.0,"Chatra, Jharkhand, India",verified
+324,Deoghar,Jharkhand,24.3284257,86.7182506,24.3284257,86.7182506,0.0,"Deoghar, Jharkhand, India",verified
+325,Dhanbad,Jharkhand,23.8451969,86.4636588,23.8451969,86.4636588,0.0,"Dhanbad, Jharkhand, India",verified
+326,Dumka,Jharkhand,24.3159312,87.2720833,24.3159312,87.2720833,0.0,"Dumka, Jharkhand, India",verified
+327,East Singhbum,Jharkhand,22.613184,86.3819399,22.613184,86.3819399,0.0,"East Singhbhum, Jharkhand, India",verified
+328,Garhwa,Jharkhand,24.053577,83.6526818,24.053577,83.6526818,0.0,"Garhwa, Jharkhand, India",verified
+329,Giridih,Jharkhand,24.3314546,86.1548117,24.3314546,86.1548117,0.0,"Giridih, Jharkhand, India",verified
+330,Godda,Jharkhand,24.8645886,87.2984838,24.8645886,87.2984838,0.0,"Godda, Jharkhand, India",verified
+331,Gumla,Jharkhand,23.1603759,84.4599565,23.1603759,84.4599565,0.0,"Gumla, Jharkhand, India",verified
+332,Hazaribagh,Jharkhand,24.0866962,85.4912231,24.0866962,85.4912231,0.0,"Hazaribagh, Jharkhand, India",verified
+333,Jamtara,Jharkhand,23.9801639,86.9243637,23.9801639,86.9243637,0.0,"Jamtara, Jharkhand, India",verified
+334,Koderma,Jharkhand,24.4931239,85.5560811,24.4931239,85.5560811,0.0,"Koderma, Kodarma, Jharkhand, India",verified
+335,Latehar,Jharkhand,23.6880057,84.4969551,23.6880057,84.4969551,0.0,"Latehar, Jharkhand, India",verified
+336,Lohardaga,Jharkhand,23.4770044,84.6986684,23.4770044,84.6986684,0.0,"Lohardaga, Jharkhand, India",verified
+337,Pakur,Jharkhand,24.5325908,87.593232,24.5325908,87.593232,0.0,"Pakur, Jharkhand, India",verified
+338,Palamu,Jharkhand,24.2212983,84.1725565,24.2212983,84.1725565,0.0,"Palamu, Jharkhand, India",verified
+339,Ranchi,Jharkhand,23.3007039,85.3738838,23.3007039,85.3738838,0.0,"Ranchi, Jharkhand, India",verified
+340,Sahebganj,Jharkhand,25.0320437,87.691764,25.0320437,87.691764,0.0,"Sahibganj, Jharkhand, India",verified
+341,Saraikela Kharsawan,Jharkhand,22.7464225,85.9168929,22.7464225,85.9168929,0.0,"Saraikela, Seraikela-Kharsawan, Jharkhand, 833219, India",verified
+342,Simdega,Jharkhand,22.5904573,84.5464805,22.5904573,84.5464805,0.0,"Simdega, Jharkhand, India",verified
+343,West Singhbhum,Jharkhand,22.4282857,85.5317483,22.4282857,85.5317483,0.0,"West Singhbhum, Jharkhand, India",verified
+344,Angul,Odisha,21.102538,84.9536825,21.102538,84.9536825,0.0,"Angul, Odisha, India",verified
+345,Balangir,Odisha,20.6095183,83.1673029,20.6095183,83.1673029,0.0,"Balangir, Odisha, India",verified
+346,Balasore,Odisha,21.5044973,86.919144,,,,,unverified (kept old point)
+347,Bargarh,Odisha,21.2319922,83.5652737,21.2319922,83.5652737,0.0,"Bargarh, Odisha, India",verified
+348,Bhadrak,Odisha,20.9854052,86.5934226,20.9854052,86.5934226,0.0,"Bhadrak, Odisha, India",verified
+349,Boudh,Odisha,20.6407463,83.9969704,20.6407463,83.9969704,0.0,"Boudh, Odisha, India",verified
+350,Cuttack,Odisha,20.3700655,85.4697256,20.3700655,85.4697256,0.0,"Cuttack, Odisha, India",verified
+351,Deogarh,Odisha,21.5370786,84.7301184,,,,,unverified (kept old point)
+352,Dhenkanal,Odisha,20.8351494,85.6022305,20.8351494,85.6022305,0.0,"Dhenkanal, Odisha, India",verified
+353,Gajapati,Odisha,19.1966026,84.1930634,19.1966026,84.1930634,0.0,"Gajapati, Odisha, India",verified
+354,Ganjam,Odisha,19.6090068,84.7080633,19.6090068,84.7080633,0.0,"Ganjam, Odisha, India",verified
+355,Jagatsinghapur,Odisha,20.1801473,86.3414874,20.1801473,86.3414874,0.0,"Jagatsinghapur, Odisha, India",verified
+356,Jajpur,Odisha,20.8746788,86.1215393,20.8746788,86.1215393,0.0,"Jajpur, Odisha, India",verified
+357,Jharsuguda,Odisha,21.8019368,83.9713964,21.8019368,83.9713964,0.0,"Jharsuguda, Odisha, India",verified
+358,Kalahandi,Odisha,19.8265757,83.0408702,19.8265757,83.0408702,0.0,"Kalahandi, Odisha, India",verified
+359,Kandhamal,Odisha,20.1306939,84.0790476,20.1306939,84.0790476,0.0,"Kandhamal, Odisha, India",verified
+360,Kendrapara,Odisha,20.5475164,86.5296168,20.5475164,86.5296168,0.0,"Kendrapara, Odisha, India",verified
+361,Keonjhar,Odisha,21.5,85.5,21.5,85.5,0.0,"Keonjhar, Kendujhar, Odisha, 758018, India",verified
+362,Khordha,Odisha,20.0538149,85.5023308,20.0538149,85.5023308,0.0,"Khordha, Odisha, India",verified
+363,Koraput,Odisha,18.7232023,82.6100596,18.7232023,82.6100596,0.0,"Koraput, Odisha, India",verified
+364,Malkangiri,Odisha,18.2744685,81.9520316,18.2744685,81.9520316,0.0,"Malkangiri, Odisha, India",verified
+365,Mayurbhanj,Odisha,21.9156338,86.3961824,21.9156338,86.3961824,0.0,"Mayurbhanj, Odisha, India",verified
+366,Nabarangpur,Odisha,19.2288319,82.5668344,,,,,unverified (kept old point)
+367,Nayagarh,Odisha,20.2393682,85.050728,20.2393682,85.050728,0.0,"Nayagarh, Odisha, India",verified
+368,Nuapada,Odisha,20.5412657,82.5292352,20.5412657,82.5292352,0.0,"Nuapada, Odisha, India",verified
+369,Puri,Odisha,19.8343066,85.6853295,19.8343066,85.6853295,0.0,"Puri, Odisha, India",verified
+370,Rayagada,Odisha,19.4426698,83.5873053,19.4426698,83.5873053,0.0,"Rayagada, Odisha, India",verified
+371,Sambalpur,Odisha,21.5570606,84.1528515,21.5570606,84.1528515,0.0,"Sambalpur, Odisha, India",verified
+372,Sonepur,Odisha,20.8431294,83.9063454,,,,,unverified (kept old point)
+373,Sundargarh,Odisha,22.0605153,83.9359154,22.0605153,83.9359154,0.0,"Sundargarh, Odisha, India",verified
+374,Bastar,Chhattisgarh,19.1191283,81.8291865,19.1191283,81.8291865,0.0,"Bastar, Chhattisgarh, India",verified
+375,Bilaspur,Chhattisgarh,22.1638486,82.1365923,22.1638486,82.1365923,0.0,"Bilaspur, Chhattisgarh, India",verified
+376,Dakshin Bastar Dantewada,Chhattisgarh,18.8640648,81.3833947,18.8640648,81.3833947,0.0,"Dantewada, Chhattisgarh, India",verified
+377,Dhamtari,Chhattisgarh,20.5326259,81.7155987,20.5326259,81.7155987,0.0,"Dhamtari, Chhattisgarh, India",verified
+378,Durg,Chhattisgarh,21.1982964,81.4007922,21.1982964,81.4007922,0.0,"Durg, Chhattisgarh, India",verified
+379,Janjgir-Champa,Chhattisgarh,21.986403,82.5536606,21.986403,82.5536606,0.0,"Janjgir-Champa, Chhattisgarh, India",verified
+380,Jashpur,Chhattisgarh,22.770251,83.9708013,22.770251,83.9708013,0.0,"Jashpur, Chhattisgarh, India",verified
+381,Uttar Bastar Kanker,Chhattisgarh,20.1286893,80.98453,20.1286893,80.98453,0.0,"Uttar Bastar Kanker, Chhattisgarh, India",verified
+382,Kabeerdham,Chhattisgarh,22.1150085,81.2446944,22.1150085,81.2446944,0.0,"Kabirdham, Chhattisgarh, India",verified
+383,Korba,Chhattisgarh,22.5198217,82.6350029,22.5198217,82.6350029,0.0,"Korba, Chhattisgarh, India",verified
+384,Korea,Chhattisgarh,23.2382999,82.3906588,,,,,unverified (kept old point)
+385,Mahasamund,Chhattisgarh,21.1922846,82.4890263,21.1922846,82.4890263,0.0,"Mahasamund, Chhattisgarh, India",verified
+386,Raigarh,Chhattisgarh,22.2361795,83.3529534,22.2361795,83.3529534,0.0,"Raigarh, Chhattisgarh, India",verified
+387,Raipur,Chhattisgarh,21.2809089,81.8164073,21.2809089,81.8164073,0.0,"Raipur, Chhattisgarh, India",verified
+388,Rajnandgaon,Chhattisgarh,21.0684425,80.7970779,21.0684425,80.7970779,0.0,"Rajnandgaon, Chhattisgarh, India",verified
+389,Surguja,Chhattisgarh,22.9470108,83.1656868,22.9470108,83.1656868,0.0,"Surguja, Chhattisgarh, India",verified
+390,Anuppur,Madhya Pradesh,23.0346179,81.7510255,23.0346179,81.7510255,0.0,"Anuppur, Madhya Pradesh, India",verified
+391,Ashoknagar,Madhya Pradesh,24.6186095,77.8786983,24.6186095,77.8786983,0.0,"Ashoknagar, Madhya Pradesh, India",verified
+392,Balaghat,Madhya Pradesh,21.8611589,80.3237105,21.8611589,80.3237105,0.0,"Balaghat, Madhya Pradesh, India",verified
+393,Barwani,Madhya Pradesh,21.7514248,74.8915957,21.7514248,74.8915957,0.0,"Barwani, Madhya Pradesh, India",verified
+394,Betul,Madhya Pradesh,21.8797472,77.8753651,21.8797472,77.8753651,0.0,"Betul, Madhya Pradesh, India",verified
+395,Bhind,Madhya Pradesh,26.3518828,78.6863189,26.3518828,78.6863189,0.0,"Bhind, Madhya Pradesh, India",verified
+396,Bhopal,Madhya Pradesh,23.4839759,77.3928507,23.4839759,77.3928507,0.0,"Bhopal, Madhya Pradesh, India",verified
+397,Burhanpur,Madhya Pradesh,21.334867,76.3708803,21.334867,76.3708803,0.0,"Burhanpur, Madhya Pradesh, India",verified
+398,Chhatarpur,Madhya Pradesh,24.7606089,79.6781776,24.7606089,79.6781776,0.0,"Chhatarpur, Madhya Pradesh, India",verified
+399,Chhindwara,Madhya Pradesh,22.2071897,78.798833,22.2071897,78.798833,0.0,"Chhindwara, Madhya Pradesh, India",verified
+400,Damoh,Madhya Pradesh,23.7981005,79.5419356,23.7981005,79.5419356,0.0,"Damoh, Madhya Pradesh, India",verified
+401,Datia,Madhya Pradesh,25.9182947,78.6644962,25.9182947,78.6644962,0.0,"Datia, Madhya Pradesh, India",verified
+402,Dewas,Madhya Pradesh,22.8057498,76.2940408,22.8057498,76.2940408,0.0,"Dewas, Madhya Pradesh, India",verified
+403,Dhar,Madhya Pradesh,22.5786572,75.2258637,22.5786572,75.2258637,0.0,"Dhar, Madhya Pradesh, India",verified
+404,Dindori,Madhya Pradesh,22.9070871,80.8846924,22.9070871,80.8846924,0.0,"Dindori, Madhya Pradesh, India",verified
+405,Khandwa (East Nimar),Madhya Pradesh,21.9769779,76.5675344,21.9769779,76.5675344,0.0,"Khandwa, Madhya Pradesh, India",verified
+406,Guna,Madhya Pradesh,24.5001772,77.2600959,24.5001772,77.2600959,0.0,"Guna, Madhya Pradesh, India",verified
+407,Gwalior,Madhya Pradesh,26.0287495,78.1570654,26.0287495,78.1570654,0.0,"Gwalior, Madhya Pradesh, India",verified
+408,Harda,Madhya Pradesh,22.2427973,77.1179173,22.2427973,77.1179173,0.0,"Harda, Madhya Pradesh, India",verified
+409,Narmadapuram,Madhya Pradesh,22.6002833,77.9269848,22.6002833,77.9269848,0.0,"Narmadapuram, Madhya Pradesh, India",verified
+410,Indore,Madhya Pradesh,22.7108119,75.8076918,22.7108119,75.8076918,0.0,"Indore, Madhya Pradesh, India",verified
+411,Jabalpur,Madhya Pradesh,23.2230231,79.9825642,23.2230231,79.9825642,0.0,"Jabalpur, Madhya Pradesh, India",verified
+412,Jhabua,Madhya Pradesh,22.8869652,74.7243249,22.8869652,74.7243249,0.0,"Jhabua, Madhya Pradesh, India",verified
+413,Katni,Madhya Pradesh,23.7176393,80.2610181,23.7176393,80.2610181,0.0,"Katni, Madhya Pradesh, India",verified
+414,Khargone (West Nimar),Madhya Pradesh,21.825599,75.614182,21.825599,75.614182,0.0,"Khargone, Khargone Tahsil, Khargone, Madhya Pradesh, 451001, India",verified
+415,Mandla,Madhya Pradesh,22.6871074,80.5816341,22.6871074,80.5816341,0.0,"Mandla, Madhya Pradesh, India",verified
+416,Mandsaur,Madhya Pradesh,24.2628148,75.385692,24.2628148,75.385692,0.0,"Mandsaur, Madhya Pradesh, India",verified
+417,Morena,Madhya Pradesh,26.3849794,77.8612721,26.3849794,77.8612721,0.0,"Morena, Madhya Pradesh, India",verified
+418,Narsimhapur,Madhya Pradesh,22.916667,79.166667,22.916667,79.166667,0.0,"Narsimhapur, Narsinghpur, Madhya Pradesh, 487110, India",verified
+419,Neemuch,Madhya Pradesh,24.6305517,75.1829,24.6305517,75.1829,0.0,"Neemuch, Madhya Pradesh, India",verified
+420,Panna,Madhya Pradesh,24.4498931,80.1462723,24.4498931,80.1462723,0.0,"Panna, Madhya Pradesh, India",verified
+421,Raisen,Madhya Pradesh,23.2675909,78.1727134,23.2675909,78.1727134,0.0,"Raisen, Madhya Pradesh, India",verified
+422,Rajgarh,Madhya Pradesh,23.8716707,76.7744703,23.8716707,76.7744703,0.0,"Rajgarh, Madhya Pradesh, India",verified
+423,Ratlam,Madhya Pradesh,23.50222,74.9551534,23.50222,74.9551534,0.0,"Ratlam, Madhya Pradesh, India",verified
+424,Rewa,Madhya Pradesh,24.7560846,81.3810574,24.7560846,81.3810574,0.0,"Rewa, Madhya Pradesh, India",verified
+425,Sagar,Madhya Pradesh,23.8083076,78.758254,23.8083076,78.758254,0.0,"Sagar, Madhya Pradesh, India",verified
+426,Satna,Madhya Pradesh,24.6954445,80.7770348,24.6954445,80.7770348,0.0,"Satna, Madhya Pradesh, India",verified
+427,Sehore,Madhya Pradesh,23.1150041,77.0665356,23.1150041,77.0665356,0.0,"Sehore, Madhya Pradesh, India",verified
+428,Seoni,Madhya Pradesh,22.2748109,79.7202522,22.2748109,79.7202522,0.0,"Seoni, Madhya Pradesh, India",verified
+429,Shahdol,Madhya Pradesh,23.3002343,81.364771,23.3002343,81.364771,0.0,"Shahdol, Madhya Pradesh, India",verified
+430,Shajapur,Madhya Pradesh,23.4171002,76.6074794,23.4171002,76.6074794,0.0,"Shajapur, Madhya Pradesh, India",verified
+431,Sheopur,Madhya Pradesh,25.7499267,76.9212945,25.7499267,76.9212945,0.0,"Sheopur, Madhya Pradesh, India",verified
+432,Shivpuri,Madhya Pradesh,25.3741215,77.8278866,25.3741215,77.8278866,0.0,"Shivpuri, Madhya Pradesh, India",verified
+433,Sidhi,Madhya Pradesh,24.2112687,81.7000415,24.2112687,81.7000415,0.0,"Sidhi, Madhya Pradesh, India",verified
+434,Tikamgarh,Madhya Pradesh,24.8552105,79.0472546,24.8552105,79.0472546,0.0,"Tikamgarh, Madhya Pradesh, India",verified
+435,Ujjain,Madhya Pradesh,23.2933285,75.6263115,23.2933285,75.6263115,0.0,"Ujjain, Madhya Pradesh, India",verified
+436,Umaria,Madhya Pradesh,23.6431837,80.9419078,23.6431837,80.9419078,0.0,"Umaria, Madhya Pradesh, India",verified
+437,Vidisha,Madhya Pradesh,23.8463004,77.8370209,23.8463004,77.8370209,0.0,"Vidisha, Madhya Pradesh, India",verified
+438,Ahmedabad,Gujarat,22.745539,72.2974907,22.745539,72.2974907,0.0,"Ahmedabad, Gujarat, India",verified
+439,Amreli,Gujarat,21.4176122,71.249609,21.4176122,71.249609,0.0,"Amreli, Gujarat, India",verified
+440,Anand,Gujarat,22.4739858,72.7361779,22.4739858,72.7361779,0.0,"Anand, Gujarat, India",verified
+441,Banas Kantha,Gujarat,24.25,72.5,24.25,72.5,0.0,"Banās Kāntha, Banaskantha, Gujarat, India",verified
+442,Bharuch,Gujarat,21.8357373,72.8820876,21.8357373,72.8820876,0.0,"Bharuch, Gujarat, India",verified
+443,Bhavnagar,Gujarat,21.5656705,71.9077622,21.5656705,71.9077622,0.0,"Bhavnagar, Gujarat, India",verified
+444,Dangs,Gujarat,20.75,73.75,20.75,73.75,0.0,"The Dāngs, Dang, Gujarat, India",verified
+445,Dahod,Gujarat,22.9194099,74.1342725,22.9194099,74.1342725,0.0,"Dahod, Gujarat, India",verified
+446,Gandhinagar,Gujarat,23.2819525,72.6536309,23.2819525,72.6536309,0.0,"Gandhinagar, Gujarat, India",verified
+447,Jamnagar,Gujarat,22.32997,70.1327524,22.32997,70.1327524,0.0,"Jamnagar, Gujarat, India",verified
+448,Junagadh,Gujarat,21.3364779,70.4250428,21.3364779,70.4250428,0.0,"Junagadh, Gujarat, India",verified
+449,Kachchh,Gujarat,23.1174518,69.591417,23.583333,70.0,66.5,"Kutch, Gujarat, India",REPLACED
+450,Kheda,Gujarat,22.8532503,72.9953586,22.8532503,72.9953586,0.0,"Kheda, Gujarat, India",verified
+451,Mahesana,Gujarat,23.5705467,72.4568752,23.5705467,72.4568752,0.0,"Mahesana, Gujarat, India",verified
+452,Narmada,Gujarat,21.7392624,73.6262458,21.7392624,73.6262458,0.0,"Narmada, Gujarat, India",verified
+453,Navsari,Gujarat,20.829714,73.0332342,20.829714,73.0332342,0.0,"Navsari, Gujarat, India",verified
+454,Panch Mahals,Gujarat,23.0,74.0,23.0,74.0,0.0,"Pānch Mahāls, Dahod, Gujarat, 389175, India",verified
+455,Patan,Gujarat,23.773753,71.6798581,23.773753,71.6798581,0.0,"Patan, Gujarat, India",verified
+456,Porbandar,Gujarat,21.602975,69.8538067,21.602975,69.8538067,0.0,"Porbandar, Gujarat, India",verified
+457,Rajkot,Gujarat,22.069288,71.0288686,22.069288,71.0288686,0.0,"Rajkot, Gujarat, India",verified
+458,Sabar Kantha,Gujarat,23.5,73.25,23.5,73.25,0.0,"Sabar Kāntha, Aravalli, Gujarat, 383315, India",verified
+459,Surat,Gujarat,21.1923647,72.9551023,21.1923647,72.9551023,0.0,"Surat, Gujarat, India",verified
+460,Surendranagar,Gujarat,22.8251395,71.6209736,22.8251395,71.6209736,0.0,"Surendranagar, Gujarat, India",verified
+461,Vadodara,Gujarat,22.3179455,73.3048674,22.3179455,73.3048674,0.0,"Vadodara, Gujarat, India",verified
+462,Valsad,Gujarat,20.4321957,73.1409893,20.4321957,73.1409893,0.0,"Valsad, Gujarat, India",verified
+463,Daman,The Dadra And Nagar Haveli And Daman And Diu,20.4169701,72.833173,,,,,unverified (kept old point)
+464,Diu,The Dadra And Nagar Haveli And Daman And Diu,20.7137783,70.9853635,,,,,unverified (kept old point)
+465,Dadra And Nagar Haveli,The Dadra And Nagar Haveli And Daman And Diu,20.2736768,73.0045787,,,,,unverified (kept old point)
+466,Ahilyanagar,Maharashtra,19.1627725,74.8580243,19.1627725,74.8580243,0.0,"Ahilyanagar District, Maharashtra, India",verified
+467,Akola,Maharashtra,20.7618122,77.1921157,20.7618122,77.1921157,0.0,"Akola, Maharashtra, India",verified
+468,Amravati,Maharashtra,21.1545412,77.6442962,21.1545412,77.6442962,0.0,"Amravati, Maharashtra, India",verified
+469,Chhatrapati Sambhajinagar,Maharashtra,20.0224932,75.1515442,20.0224932,75.1515442,0.0,"Chhatrapati Sambhajinagar, Maharashtra, India",verified
+470,Beed,Maharashtra,18.9918442,75.909784,18.9918442,75.909784,0.0,"Beed, Maharashtra, India",verified
+471,Bhandara,Maharashtra,21.1225869,79.794509,21.1225869,79.794509,0.0,"Bhandara, Maharashtra, India",verified
+472,Buldhana,Maharashtra,20.562845,76.4086986,20.562845,76.4086986,0.0,"Buldhana, Maharashtra, India",verified
+473,Chandrapur,Maharashtra,20.0967555,79.5045475,20.0967555,79.5045475,0.0,"Chandrapur, Maharashtra, India",verified
+474,Dhule,Maharashtra,21.1305215,74.4900614,21.1305215,74.4900614,0.0,"Dhule, Maharashtra, India",verified
+475,Gadchiroli,Maharashtra,19.7590704,80.1622807,19.7590704,80.1622807,0.0,"Gadchiroli, Maharashtra, India",verified
+476,Gondia,Maharashtra,21.455228,80.1962729,21.455228,80.1962729,0.0,"Gondia City, Gondiya Taluka, Gondiya, Maharashtra, India",verified
+477,Hingoli,Maharashtra,19.5431163,77.1739432,19.5431163,77.1739432,0.0,"Hingoli, Maharashtra, India",verified
+478,Jalgaon,Maharashtra,20.8428827,75.5261246,20.8428827,75.5261246,0.0,"Jalgaon, Maharashtra, India",verified
+479,Jalna,Maharashtra,19.918833,75.8708599,19.918833,75.8708599,0.0,"Jalna, Maharashtra, India",verified
+480,Kolhapur,Maharashtra,16.4626695,74.0894749,16.4626695,74.0894749,0.0,"Kolhapur, Maharashtra, India",verified
+481,Latur,Maharashtra,18.3553347,76.7548997,18.3553347,76.7548997,0.0,"Latur, Maharashtra, India",verified
+482,Mumbai,Maharashtra,19.0592671,72.861326,19.054999,72.8692035,1.0,"Mumbai, Mumbai Suburban District, Maharashtra, 400051, India",verified
+483,Mumbai Suburban,Maharashtra,19.1309844,72.8894618,19.1309844,72.8894618,0.0,"Mumbai Suburban District, Maharashtra, India",verified
+484,Nagpur,Maharashtra,21.1529647,79.0145059,21.1529647,79.0145059,0.0,"Nagpur, Maharashtra, India",verified
+485,Nanded,Maharashtra,19.0942729,77.4832628,19.0942729,77.4832628,0.0,"Nanded, Maharashtra, India",verified
+486,Nandurbar,Maharashtra,21.5141622,74.5405513,21.5141622,74.5405513,0.0,"Nandurbar, Maharashtra, India",verified
+487,Nashik,Maharashtra,20.2254559,74.104233,20.2254559,74.104233,0.0,"Nashik, Maharashtra, India",verified
+488,Dharashiv,Maharashtra,18.169844,76.1179632,18.169844,76.1179632,0.0,"Dharashiv, Maharashtra, India",verified
+489,Parbhani,Maharashtra,19.2901981,76.6026443,19.2901981,76.6026443,0.0,"Parbhani, Maharashtra, India",verified
+490,Pune,Maharashtra,18.6448627,73.9224157,18.6448627,73.9224157,0.0,"Pune, Maharashtra, India",verified
+491,Raigad,Maharashtra,18.4928092,73.138071,18.4928092,73.138071,0.0,"Raigad, Maharashtra, India",verified
+492,Ratnagiri,Maharashtra,17.2826079,73.4569787,17.2826079,73.4569787,0.0,"Ratnagiri, Maharashtra, India",verified
+493,Sangli,Maharashtra,17.1726928,74.5867654,17.1726928,74.5867654,0.0,"Sangli, Maharashtra, India",verified
+494,Satara,Maharashtra,17.6361289,74.2982781,17.6361289,74.2982781,0.0,"Satara, Maharashtra, India",verified
+495,Sindhudurg,Maharashtra,16.1357193,73.6522086,16.1357193,73.6522086,0.0,"Sindhudurg, Maharashtra, India",verified
+496,Solapur,Maharashtra,17.8499067,75.2763203,17.8499067,75.2763203,0.0,"Solapur, Maharashtra, India",verified
+497,Thane,Maharashtra,19.3653598,73.3685437,19.3653598,73.3685437,0.0,"Thane, Maharashtra, India",verified
+498,Wardha,Maharashtra,20.8256231,78.6131455,20.8256231,78.6131455,0.0,"Wardha, Maharashtra, India",verified
+499,Washim,Maharashtra,20.2874178,77.2369655,20.2874178,77.2369655,0.0,"Washim, Maharashtra, India",verified
+500,Yavatmal,Maharashtra,20.0638677,78.3565663,20.0638677,78.3565663,0.0,"Yavatmal, Maharashtra, India",verified
+501,Adilabad,Telangana,19.5457038,78.6086759,19.5457038,78.6086759,0.0,"Adilabad, Telangana, India",verified
+502,Ananthapuramu,Andhra Pradesh,14.0126989,78.4180222,,,,,unverified (kept old point)
+503,Chittoor,Andhra Pradesh,13.325036,79.6480611,13.325036,79.6480611,0.0,"Chittoor, Andhra Pradesh, India",verified
+504,Y.S.R. Kadapa,Andhra Pradesh,14.4607151,78.8237312,,,,,unverified (kept old point)
+505,East Godavari,Andhra Pradesh,16.9956639,81.7154378,16.9956639,81.7154378,0.0,"East Godavari, Andhra Pradesh, India",verified
+506,Guntur,Andhra Pradesh,16.2853547,80.5686143,16.2853547,80.5686143,0.0,"Guntur, Andhra Pradesh, India",verified
+507,Hyderabad,Telangana,17.388786,78.4610647,17.388786,78.4610647,0.0,"Hyderabad, Telangana, India",verified
+508,Karimnagar,Telangana,18.4075996,79.2182933,18.4075996,79.2182933,0.0,"Karimnagar, Telangana, India",verified
+509,Khammam,Telangana,17.1729189,80.4057537,17.1729189,80.4057537,0.0,"Khammam, Telangana, India",verified
+510,Krishna,Andhra Pradesh,16.2135466,81.0277844,16.2135466,81.0277844,0.0,"Krishna, Andhra Pradesh, India",verified
+511,Kurnool,Andhra Pradesh,15.5478804,77.554259,15.5478804,77.554259,0.0,"Kurnool, Andhra Pradesh, India",verified
+512,Mahabubnagar,Telangana,16.6965686,77.9591146,16.6965686,77.9591146,0.0,"Mahabubnagar, Telangana, India",verified
+513,Medak,Telangana,17.9375095,78.211745,17.9375095,78.211745,0.0,"Medak, Telangana, India",verified
+514,Nalgonda,Telangana,16.8579636,79.2174935,16.8579636,79.2174935,0.0,"Nalgonda, Telangana, India",verified
+515,Sri Potti Sriramulu Nellore,Andhra Pradesh,14.557001,79.7234781,14.557001,79.7234781,0.0,"Sri Potti Sriramulu Nellore, Andhra Pradesh, India",verified
+516,Nizamabad,Telangana,18.7248422,78.1921833,18.7248422,78.1921833,0.0,"Nizamabad, Telangana, India",verified
+517,Prakasam,Andhra Pradesh,15.5641955,80.0066786,15.5641955,80.0066786,0.0,"Prakasam, Andhra Pradesh, India",verified
+518,Ranga Reddy,Telangana,17.1333954,78.3970979,17.1333954,78.3970979,0.0,"Ranga Reddy, Telangana, India",verified
+519,Srikakulam,Andhra Pradesh,18.622438,84.1443764,18.622438,84.1443764,0.0,"Srikakulam, Andhra Pradesh, India",verified
+520,Visakhapatnam,Andhra Pradesh,17.8053222,83.2827677,17.8053222,83.2827677,0.0,"Visakhapatnam, Andhra Pradesh, India",verified
+521,Vizianagaram,Andhra Pradesh,18.2760018,83.4662692,18.2760018,83.4662692,0.0,"Vizianagaram, Andhra Pradesh, India",verified
+522,Warangal,Telangana,17.8675814,79.801947,17.8675814,79.801947,0.0,"Warangal, Telangana, India",verified
+523,West Godavari,Andhra Pradesh,16.6443029,81.5885247,16.6443029,81.5885247,0.0,"West Godavari, Andhra Pradesh, India",verified
+524,Bagalkote,Karnataka,16.2903648,75.5915819,16.2903648,75.5915819,0.0,"Bagalkote, Karnataka, India",verified
+525,Bengaluru Urban,Karnataka,12.9461554,77.5503844,12.9461554,77.5503844,0.0,"Bengaluru Urban, Karnataka, India",verified
+526,Bengaluru Rural,Karnataka,13.247078,77.4914691,13.1826245,77.3395681,17.9,"Bengaluru North, Karnataka, India",verified
+527,Belagavi,Karnataka,16.1587846,74.888862,16.1587846,74.888862,0.0,"Belagavi, Karnataka, India",verified
+528,Ballari,Karnataka,15.3483166,76.8054883,15.3483166,76.8054883,0.0,"Ballari, Karnataka, India",verified
+529,Bidar,Karnataka,18.0207297,77.2487204,18.0207297,77.2487204,0.0,"Bidar, Karnataka, India",verified
+530,Vijayapura,Karnataka,16.814415,75.8933856,16.814415,75.8933856,0.0,"Vijayapura, Karnataka, India",verified
+531,Chamarajanagar,Karnataka,11.9544201,77.1069086,11.9544201,77.1069086,0.0,"Chamarajanagar, Karnataka, India",verified
+532,Chikkamagaluru,Karnataka,13.4058699,75.638758,13.4058699,75.638758,0.0,"Chikkamagaluru, Karnataka, India",verified
+533,Chitradurga,Karnataka,14.3049174,76.5296667,14.3049174,76.5296667,0.0,"Chitradurga, Karnataka, India",verified
+534,Dakshina Kannada,Karnataka,12.8226434,75.2265036,12.8226434,75.2265036,0.0,"Dakshina Kannada, Karnataka, India",verified
+535,Davanagere,Karnataka,14.2558835,75.8303421,14.2558835,75.8303421,0.0,"Davanagere, Karnataka, India",verified
+536,Dharwad,Karnataka,15.3707296,75.1332867,15.3707296,75.1332867,0.0,"Dharwad, Karnataka, India",verified
+537,Gadag,Karnataka,15.416692,75.6815801,15.416692,75.6815801,0.0,"Gadag, Karnataka, India",verified
+538,Kalaburagi,Karnataka,17.2408957,76.7697439,17.2408957,76.7697439,0.0,"Kalaburagi, Karnataka, India",verified
+539,Hassan,Karnataka,13.0301852,76.1744968,13.0301852,76.1744968,0.0,"Hassan, Karnataka, India",verified
+540,Haveri,Karnataka,14.7180268,75.3656423,14.7180268,75.3656423,0.0,"Haveri, Karnataka, India",verified
+541,Kodagu,Karnataka,12.3827332,75.6640715,12.3827332,75.6640715,0.0,"Kodagu, Karnataka, India",verified
+542,Kolar,Karnataka,13.1805066,78.2669329,13.1805066,78.2669329,0.0,"Kolar, Karnataka, India",verified
+543,Koppal,Karnataka,15.5748238,76.3118494,15.5748238,76.3118494,0.0,"Koppal, Karnataka, India",verified
+544,Mandya,Karnataka,12.6368939,76.7275477,12.6368939,76.7275477,0.0,"Mandya, Karnataka, India",verified
+545,Mysuru,Karnataka,12.1968318,76.6120468,12.1968318,76.6120468,0.0,"Mysuru District, Karnataka, India",verified
+546,Raichur,Karnataka,16.0547194,76.9003647,16.0547194,76.9003647,0.0,"Raichur, Karnataka, India",verified
+547,Shivamogga,Karnataka,14.0556503,75.2380553,14.0556503,75.2380553,0.0,"Shimoga, Karnataka, India",verified
+548,Tumakuru,Karnataka,13.4192512,76.8810004,13.4192512,76.8810004,0.0,"Tumakuru, Karnataka, India",verified
+549,Udupi,Karnataka,13.5269784,74.8731879,13.5269784,74.8731879,0.0,"Udupi, Karnataka, India",verified
+550,Uttara Kannada,Karnataka,14.7253795,74.6403389,14.7253795,74.6403389,0.0,"Uttara Kannada, Karnataka, India",verified
+551,North Goa,Goa,15.6038925,73.9967006,15.6038925,73.9967006,0.0,"North Goa, Goa, India",verified
+552,South Goa,Goa,15.3376121,73.9937035,15.3376121,73.9937035,0.0,"South Goa, Goa, India",verified
+554,Alappuzha,Kerala,9.5003416,76.4123364,9.5003416,76.4123364,0.0,"Alappuzha, Kerala, India",verified
+555,Ernakulam,Kerala,10.0383947,76.5074145,10.0383947,76.5074145,0.0,"Ernakulam, Kerala, India",verified
+556,Idukki,Kerala,9.8154785,76.9991599,9.8154785,76.9991599,0.0,"Idukki, Kerala, India",verified
+557,Kannur,Kerala,11.9863343,75.5479704,11.9863343,75.5479704,0.0,"Kannur, Kerala, India",verified
+558,Kasaragod,Kerala,12.4221964,75.1904446,12.4221964,75.1904446,0.0,"Kasaragod, Kerala, India",verified
+559,Kollam,Kerala,8.9674039,76.8585783,8.9674039,76.8585783,0.0,"Kollam, Kerala, India",verified
+560,Kottayam,Kerala,9.6287383,76.6455326,9.6287383,76.6455326,0.0,"Kottayam, Kerala, India",verified
+561,Kozhikode,Kerala,11.4655936,75.89194,11.4655936,75.89194,0.0,"Kozhikode, Kerala, India",verified
+562,Malappuram,Kerala,11.1065685,76.1101742,11.1065685,76.1101742,0.0,"Malappuram, Kerala, India",verified
+563,Palakkad,Kerala,10.7873692,76.4742172,10.7873692,76.4742172,0.0,"Palakkad, Kerala, India",verified
+564,Pathanamthitta,Kerala,9.2780841,76.9737443,9.2780841,76.9737443,0.0,"Pathanamthitta, Kerala, India",verified
+565,Thiruvananthapuram,Kerala,8.5769705,77.0501246,8.5769705,77.0501246,0.0,"Thiruvananthapuram, Kerala, India",verified
+566,Thrissur,Kerala,10.4786969,76.2736512,10.4786969,76.2736512,0.0,"Thrissur, Kerala, India",verified
+567,Wayanad,Kerala,11.7151291,76.1271185,11.7151291,76.1271185,0.0,"Wayanad, Kerala, India",verified
+568,Chennai,Tamil Nadu,13.0439027,80.2210775,13.0439027,80.2210775,0.0,"Chennai District, Tamil Nadu, India",verified
+569,Coimbatore,Tamil Nadu,10.8124445,77.0796084,10.8124445,77.0796084,0.0,"Coimbatore, Tamil Nadu, India",verified
+570,Cuddalore,Tamil Nadu,11.5202071,79.3396356,11.5202071,79.3396356,0.0,"Cuddalore, Tamil Nadu, India",verified
+571,Dharmapuri,Tamil Nadu,12.1456131,78.1132217,12.1456131,78.1132217,0.0,"Dharmapuri, Tamil Nadu, India",verified
+572,Dindigul,Tamil Nadu,10.4257161,77.8154728,10.4257161,77.8154728,0.0,"Dindigul, Tamil Nadu, India",verified
+573,Erode,Tamil Nadu,11.4905282,77.3505274,11.4905282,77.3505274,0.0,"Erode, Tamil Nadu, India",verified
+574,Kancheepuram,Tamil Nadu,12.88211,79.8063903,12.8796052,79.7042762,11.1,"Kancheepuram, Kanchipuram, Tamil Nadu, India",verified
+575,Kanniyakumari,Tamil Nadu,8.3279814,77.3541173,8.3279814,77.3541173,0.0,"Kanniyakumari, Tamil Nadu, India",verified
+576,Karur,Tamil Nadu,10.8217671,78.3828654,10.8217671,78.3828654,0.0,"Karur, Tamil Nadu, India",verified
+577,Krishnagiri,Tamil Nadu,12.5152075,78.0093769,12.5152075,78.0093769,0.0,"Krishnagiri, Tamil Nadu, India",verified
+578,Madurai,Tamil Nadu,9.9369266,78.007823,9.9369266,78.007823,0.0,"Madurai, Tamil Nadu, India",verified
+579,Nagapattinam,Tamil Nadu,10.6026203,79.7619348,10.6026203,79.7619348,0.0,"Nagapattinam, Tamil Nadu, India",verified
+580,Namakkal,Tamil Nadu,11.3033889,78.118604,11.3033889,78.118604,0.0,"Namakkal, Tamil Nadu, India",verified
+581,Perambalur,Tamil Nadu,11.2902641,78.9300404,11.2902641,78.9300404,0.0,"Perambalur, Tamil Nadu, India",verified
+582,Pudukkottai,Tamil Nadu,10.2903072,78.8173617,10.2903072,78.8173617,0.0,"Pudukkottai, Tamil Nadu, India",verified
+583,Ramanathapuram,Tamil Nadu,9.5205576,78.5184635,9.5205576,78.5184635,0.0,"Ramanathapuram, Tamil Nadu, India",verified
+584,Salem,Tamil Nadu,11.6469616,78.2106958,11.6469616,78.2106958,0.0,"Salem, Tamil Nadu, India",verified
+585,Sivaganga,Tamil Nadu,9.8671821,78.550483,9.851231,78.5304715,2.8,"Sivaganga, Sivagangai, Tamil Nadu, India",verified
+586,Thanjavur,Tamil Nadu,10.659037,79.2014278,10.659037,79.2014278,0.0,"Thanjavur, Tamil Nadu, India",verified
+587,The Nilgiris,Tamil Nadu,11.4,76.7,11.4,76.7,0.0,"The Nilgiris, Nilgiris, Tamil Nadu, 643001, India",verified
+588,Theni,Tamil Nadu,9.8692558,77.4222974,9.8692558,77.4222974,0.0,"Theni, Tamil Nadu, India",verified
+589,Thiruvallur,Tamil Nadu,13.2537619,80.0562572,13.2537619,80.0562572,0.0,"Thiruvallur, Tamil Nadu, India",verified
+590,Thiruvarur,Tamil Nadu,10.6878621,79.4979437,10.6878621,79.4979437,0.0,"Thiruvarur, Tamil Nadu, India",verified
+591,Tiruchirappalli,Tamil Nadu,10.8504608,78.724533,10.8504608,78.724533,0.0,"Tiruchirappalli, Tamil Nadu, India",verified
+592,Tirunelveli,Tamil Nadu,8.5495014,77.5805178,8.5495014,77.5805178,0.0,"Tirunelveli, Tamil Nadu, India",verified
+593,Tiruvannamalai,Tamil Nadu,12.4289282,78.99915,12.4289282,78.99915,0.0,"Tiruvannamalai, Tamil Nadu, India",verified
+594,Thoothukkudi,Tamil Nadu,8.7905224,78.1167832,8.7567452,78.0797527,5.5,"Thoothukkudi, Thoothukudi, Tamil Nadu, India",verified
+595,Vellore,Tamil Nadu,12.9021849,79.061104,12.9021849,79.061104,0.0,"Vellore, Tamil Nadu, India",verified
+596,Viluppuram,Tamil Nadu,12.1166967,79.5989236,12.1166967,79.5989236,0.0,"Viluppuram, Tamil Nadu, India",verified
+597,Virudhunagar,Tamil Nadu,9.4926289,77.8631831,9.4926289,77.8631831,0.0,"Virudhunagar, Tamil Nadu, India",verified
+598,Karaikal,Puducherry,10.9156489,79.8069488,10.9156489,79.8069488,0.0,"Karaikal, Puducherry, India",verified
+600,Puducherry,Puducherry,11.9220116,79.7951365,11.9220116,79.7951365,0.0,"Puducherry, India",verified
+602,South Andamans,Andaman And Nicobar Islands,11.6645348,92.7390448,11.6645348,92.7390448,0.0,"Port Blair, Port Blair Tehsil, South Andaman, Andaman and Nicobar Islands, 744101, India",verified
+603,Nicobars,Andaman And Nicobar Islands,9.187057,92.7730136,9.187057,92.7730136,0.0,"Car Nicobar, Nicobar, Andaman and Nicobar Islands, India",verified
+604,Nuh,Haryana,27.9935177,77.0419634,27.9935177,77.0419634,0.0,"Nuh, Haryana, India",verified
+605,Barnala,Punjab,30.3716802,75.5039887,30.3716802,75.5039887,0.0,"Barnala, Punjab, India",verified
+606,Khunti,Jharkhand,22.9281801,85.2814475,22.9281801,85.2814475,0.0,"Khunti, Jharkhand, India",verified
+607,Ramgarh,Jharkhand,23.693479,85.5215989,23.693479,85.5215989,0.0,"Ramgarh, Jharkhand, India",verified
+608,S.A.S Nagar,Punjab,30.7178072,76.6985062,30.676694,76.7084883,4.7,"S.A.S. Nagar (Mohali) Tahsil, Sahibzada Ajit Singh Nagar, Punjab, India",verified
+609,Tarn Taran,Punjab,31.3212453,74.8416687,31.3212453,74.8416687,0.0,"Tarn Taran, Punjab, India",verified
+610,Ariyalur,Tamil Nadu,11.1530559,79.2585797,11.1530559,79.2585797,0.0,"Ariyalur, Tamil Nadu, India",verified
+611,Arwal,Bihar,25.1812832,84.6596648,25.1812832,84.6596648,0.0,"Arwal, Bihar, India",verified
+612,Chirang,Assam,26.6464231,90.624157,26.6464231,90.624157,0.0,"Chirang, Assam, India",verified
+613,Peren,Nagaland,25.4499691,93.6001738,25.4499691,93.6001738,0.0,"Peren, Nagaland, India",verified
+614,Kiphire,Nagaland,25.8117088,94.8474036,25.8117088,94.8474036,0.0,"Kiphire, Nagaland, 798611, India",verified
+615,Longleng,Nagaland,26.5839315,94.8045481,26.5839315,94.8045481,0.0,"Longleng, Nagaland, 798625, India",verified
+616,Baksa,Assam,26.6275689,91.3388551,26.6275689,91.3388551,0.0,"Baksa, Assam, India",verified
+617,Udalguri,Assam,26.7047238,92.0421507,26.7047238,92.0421507,0.0,"Udalguri, Assam, India",verified
+618,Kamrup Metro,Assam,26.1161783,91.7972485,,,,,unverified (kept old point)
+619,Palwal,Haryana,28.0599426,77.3223422,28.0599426,77.3223422,0.0,"Palwal, Haryana, India",verified
+620,Kishtwar,Jammu And Kashmir,33.61562,75.8793972,33.61562,75.8793972,0.0,"Kishtwar, Jammu and Kashmir, India",verified
+621,Ramban,Jammu And Kashmir,33.3332892,75.1984763,33.3332892,75.1984763,0.0,"Ramban district, Jammu and Kashmir, India",verified
+622,Kulgam,Jammu And Kashmir,33.6250187,74.6949458,33.6250187,74.6949458,0.0,"Kulgam, Jammu and Kashmir, India",verified
+623,Bandipora,Jammu And Kashmir,34.2819952,74.462952,34.4975027,74.6999509,32.4,"Bandipora, Bandipore, Jammu and Kashmir, 193502, India",REPLACED
+624,Samba,Jammu And Kashmir,32.5759118,75.1203446,32.5759118,75.1203446,0.0,"Samba district, Jammu and Kashmir, India",verified
+625,Shopian,Jammu And Kashmir,33.7207837,74.7714244,,,,,unverified (kept old point)
+626,Ganderbal,Jammu And Kashmir,34.2889322,75.0407983,,,,,unverified (kept old point)
+627,Reasi,Jammu And Kashmir,33.2059909,74.8626794,,,,,unverified (kept old point)
+628,Anjaw,Arunachal Pradesh,28.155391,96.8407237,,,,,unverified (kept old point)
+629,Pratapgarh,Rajasthan,24.0232221,74.6250275,,,,,unverified (kept old point)
+630,Chikkaballapura,Karnataka,13.5897941,77.778793,,,,,unverified (kept old point)
+631,Bengaluru South,Karnataka,12.720006,77.3184199,,,,,unverified (kept old point)
+632,North And Middle Andaman,Andaman And Nicobar Islands,12.6112387,92.8316541,,,,,unverified (kept old point)
+633,Kasganj,Uttar Pradesh,27.7888527,78.8229701,,,,,unverified (kept old point)
+634,Tiruppur,Tamil Nadu,10.7915267,77.5325466,,,,,unverified (kept old point)
+635,Yadgir,Karnataka,16.5744123,76.9254434,,,,,unverified (kept old point)
+636,Bijapur,Chhattisgarh,18.7935679,80.815939,,,,,unverified (kept old point)
+637,Narayanpur,Chhattisgarh,19.5842032,81.1136986,,,,,unverified (kept old point)
+638,Singrauli,Madhya Pradesh,24.2431343,82.3827672,,,,,unverified (kept old point)
+639,Alirajpur,Madhya Pradesh,22.2859525,74.3545628,,,,,unverified (kept old point)
+640,Amethi,Uttar Pradesh,26.346274,81.6252039,,,,,unverified (kept old point)
+641,Tapi,Gujarat,21.1916567,73.5560631,,,,,unverified (kept old point)
+642,Sukma,Chhattisgarh,18.2665423,81.2925234,,,,,unverified (kept old point)
+643,Kondagaon,Chhattisgarh,19.5885769,81.6628742,,,,,unverified (kept old point)
+644,Balodabazar-Bhatapara,Chhattisgarh,21.5731848,82.2994821,,,,,unverified (kept old point)
+645,Gariyaband,Chhattisgarh,20.5267561,82.1917217,,,,,unverified (kept old point)
+646,Balod,Chhattisgarh,20.7277192,81.1446948,,,,,unverified (kept old point)
+647,Mungeli,Chhattisgarh,22.0661098,81.6874282,,,,,unverified (kept old point)
+648,Surajpur,Chhattisgarh,23.3577769,82.9761277,,,,,unverified (kept old point)
+649,Balrampur-Ramanujganj,Chhattisgarh,23.616665,83.618798,,,,,unverified (kept old point)
+650,Bemetara,Chhattisgarh,21.6783867,81.4412578,,,,,unverified (kept old point)
+651,Fazilka,Punjab,30.3198406,74.1217943,,,,,unverified (kept old point)
+652,Khowai,Tripura,23.9563913,91.642107,,,,,unverified (kept old point)
+653,Sepahijala,Tripura,23.6658005,91.3200275,,,,,unverified (kept old point)
+654,Gomati,Tripura,23.4278179,91.6149726,,,,,unverified (kept old point)
+655,Unakoti,Tripura,24.1909849,92.0460483,,,,,unverified (kept old point)
+656,North Garo Hills,Meghalaya,25.8619841,90.7017705,,,,,unverified (kept old point)
+657,East Jaintia Hills,Meghalaya,25.2515761,92.4840501,,,,,unverified (kept old point)
+658,South West Khasi Hills,Meghalaya,25.3307221,91.3217388,,,,,unverified (kept old point)
+659,Sambhal,Uttar Pradesh,28.4271928,78.5564546,,,,,unverified (kept old point)
+660,Shamli,Uttar Pradesh,29.4811508,77.2901344,,,,,unverified (kept old point)
+661,Hapur,Uttar Pradesh,28.7166767,77.890433,,,,,unverified (kept old point)
+662,Pathankot,Punjab,32.3021899,75.6589406,,,,,unverified (kept old point)
+663,South West Garo Hills,Meghalaya,25.444631,89.9969655,,,,,unverified (kept old point)
+664,Alipurduar,West Bengal,26.6288169,89.4537824,,,,,unverified (kept old point)
+665,Palghar,Maharashtra,19.757249,73.0931199,,,,,unverified (kept old point)
+666,Longding,Arunachal Pradesh,26.8794546,95.3155652,,,,,unverified (kept old point)
+667,Agar-Malwa,Madhya Pradesh,23.935092,76.1449595,,,,,unverified (kept old point)
+668,Chhotaudepur,Gujarat,22.2224345,73.7778749,,,,,unverified (kept old point)
+669,Mahisagar,Gujarat,23.1912194,73.6644398,,,,,unverified (kept old point)
+672,Arvalli,Gujarat,23.4634245,73.2990631,,,,,unverified (kept old point)
+673,Morbi,Gujarat,22.8003959,70.886232,,,,,unverified (kept old point)
+674,Devbhumi Dwarka,Gujarat,22.2428993,68.9656446,,,,,unverified (kept old point)
+675,Gir Somnath,Gujarat,20.9298181,70.7627578,,,,,unverified (kept old point)
+676,Botad,Gujarat,22.0467097,71.6689617,,,,,unverified (kept old point)
+677,Kra Daadi,Arunachal Pradesh,27.9635418,93.7665654,,,,,unverified (kept old point)
+678,Namsai,Arunachal Pradesh,27.7140306,96.0159709,,,,,unverified (kept old point)
+679,Siang,Arunachal Pradesh,28.477492,94.8165573,,,,,unverified (kept old point)
+680,Nirmal,Telangana,19.091521,78.396609,,,,,unverified (kept old point)
+681,Jagitial,Telangana,18.7908955,78.9118341,,,,,unverified (kept old point)
+682,Peddapalli,Telangana,18.6206531,79.4950171,,,,,unverified (kept old point)
+683,Rajanna Sircilla,Telangana,18.452116,78.7645584,,,,,unverified (kept old point)
+684,Mancherial,Telangana,18.9812967,79.5198096,,,,,unverified (kept old point)
+685,Kamareddy,Telangana,18.316551,78.0539381,,,,,unverified (kept old point)
+686,Hanumakonda,Telangana,18.032699,79.4283969,,,,,unverified (kept old point)
+687,Jayashankar Bhupalapally,Telangana,18.5159872,79.9693966,,,,,unverified (kept old point)
+688,Mahabubabad,Telangana,17.7138983,80.0413425,,,,,unverified (kept old point)
+689,Jangoan,Telangana,17.71981,79.159451,,,,,unverified (kept old point)
+690,Bhadradri Kothagudem,Telangana,17.7166633,80.5712609,,,,,unverified (kept old point)
+691,Sangareddy,Telangana,17.8684342,77.8227189,,,,,unverified (kept old point)
+692,Siddipet,Telangana,18.0055851,78.896113,,,,,unverified (kept old point)
+693,Wanaparthy,Telangana,16.2852944,77.9864473,,,,,unverified (kept old point)
+694,Nagarkurnool,Telangana,16.4157626,78.6830433,,,,,unverified (kept old point)
+695,Jogulamba Gadwal,Telangana,16.0999202,77.7341584,,,,,unverified (kept old point)
+696,Suryapet,Telangana,17.0800139,79.792533,,,,,unverified (kept old point)
+697,Yadadri Bhuvanagiri,Telangana,17.4281967,79.090491,,,,,unverified (kept old point)
+698,Vikarabad,Telangana,17.2702855,77.745297,,,,,unverified (kept old point)
+699,Kumuram Bheem Asifabad,Telangana,19.3338189,79.4219793,,,,,unverified (kept old point)
+700,Medchal Malkajgiri,Telangana,17.5349835,78.5246387,,,,,unverified (kept old point)
+701,Charkhi Dadri,Haryana,28.6000997,76.1123707,,,,,unverified (kept old point)
+702,Kalimpong,West Bengal,27.027877,88.647194,,,,,unverified (kept old point)
+703,Jhargram,West Bengal,22.332417,86.9936688,,,,,unverified (kept old point)
+704,Paschim Bardhaman,West Bengal,23.6461884,87.1587969,,,,,unverified (kept old point)
+705,Biswanath,Assam,26.7938596,93.3591936,,,,,unverified (kept old point)
+706,Majuli,Assam,27.0219529,94.327423,,,,,unverified (kept old point)
+707,South Salmara Mancachar,Assam,25.6296326,89.9315938,,,,,unverified (kept old point)
+708,Charaideo,Assam,27.0696859,95.0642272,,,,,unverified (kept old point)
+709,Hojai,Assam,25.9629402,92.981829,,,,,unverified (kept old point)
+710,West Karbi Anglong,Assam,25.8529142,92.5875681,,,,,unverified (kept old point)
+718,Kamle,Arunachal Pradesh,27.7312325,94.0964663,,,,,unverified (kept old point)
+719,Lower Siang,Arunachal Pradesh,27.8006983,94.5650233,,,,,unverified (kept old point)
+720,Mulugu,Telangana,18.3145348,80.3458816,,,,,unverified (kept old point)
+721,Narayanpet,Telangana,16.7005518,77.6164845,,,,,unverified (kept old point)
+722,Niwari,Madhya Pradesh,25.3123152,78.667564,,,,,unverified (kept old point)
+723,Pakke Kessang,Arunachal Pradesh,27.1582856,93.1561502,,,,,unverified (kept old point)
+724,Leparada,Arunachal Pradesh,27.9831179,94.6879423,,,,,unverified (kept old point)
+725,Shi Yomi,Arunachal Pradesh,28.6851663,94.2367824,,,,,unverified (kept old point)
+726,Hnahthial,Mizoram,22.9663656,93.0102645,,,,,unverified (kept old point)
+727,Saitual,Mizoram,23.8128569,92.9727975,,,,,unverified (kept old point)
+728,Khawzawl,Mizoram,23.4877894,93.1402943,,,,,unverified (kept old point)
+729,Kallakurichi,Tamil Nadu,11.7946847,79.0388211,,,,,unverified (kept old point)
+730,Chengalpattu,Tamil Nadu,12.6149934,80.0053801,,,,,unverified (kept old point)
+731,Ranipet,Tamil Nadu,12.9186243,79.4081921,,,,,unverified (kept old point)
+732,Tirupathur,Tamil Nadu,12.5858719,78.6313559,,,,,unverified (kept old point)
+733,Tenkasi,Tamil Nadu,9.0933908,77.4758373,,,,,unverified (kept old point)
+734,Gaurela-Pendra-Marwahi,Chhattisgarh,22.8313186,81.958966,,,,,unverified (kept old point)
+735,Mayiladuthurai,Tamil Nadu,11.1895598,79.69457,,,,,unverified (kept old point)
+736,Noklak,Nagaland,26.1123947,95.0124041,,,,,unverified (kept old point)
+737,Malerkotla,Punjab,30.5372203,75.9088832,,,,,unverified (kept old point)
+738,Vijayanagara,Karnataka,14.9428567,76.0448007,,,,,unverified (kept old point)
+741,Pakyong,Sikkim,27.228935,88.6471196,,,,,unverified (kept old point)
+742,Soreng,Sikkim,27.1901652,88.2006735,,,,,unverified (kept old point)
+743,Parvathipuram Manyam,Andhra Pradesh,18.7514985,83.5487473,,,,,unverified (kept old point)
+744,Anakapalli,Andhra Pradesh,17.6715331,82.7747567,,,,,unverified (kept old point)
+745,Alluri Sitharama Raju,Andhra Pradesh,18.0591962,82.6749006,,,,,unverified (kept old point)
+746,Kakinada,Andhra Pradesh,17.120459,82.1842504,,,,,unverified (kept old point)
+747,Dr. B.R. Ambedkar Konaseema,Andhra Pradesh,16.6294048,82.081931,,,,,unverified (kept old point)
+748,Eluru,Andhra Pradesh,17.013798,81.0803354,,,,,unverified (kept old point)
+749,Ntr,Andhra Pradesh,16.8169118,80.2502299,,,,,unverified (kept old point)
+750,Bapatla,Andhra Pradesh,15.9344304,80.4505522,,,,,unverified (kept old point)
+751,Palnadu,Andhra Pradesh,16.3231038,79.6975049,,,,,unverified (kept old point)
+752,Tirupati,Andhra Pradesh,13.8891927,79.6730504,,,,,unverified (kept old point)
+753,Annamayya,Andhra Pradesh,13.7883575,78.6346286,,,,,unverified (kept old point)
+754,Sri Sathya Sai,Andhra Pradesh,14.1681806,77.9641188,,,,,unverified (kept old point)
+755,Nandyal,Andhra Pradesh,15.5247879,78.4149396,,,,,unverified (kept old point)
+757,Tseminyu,Nagaland,25.9410368,94.1685474,,,,,unverified (kept old point)
+758,Chumoukedima,Nagaland,25.808681,93.714867,,,,,unverified (kept old point)
+759,Khairagarh-Chhuikhadan-Gandai,Chhattisgarh,21.528849,80.9484326,,,,,unverified (kept old point)
+760,Manendragarh-Chirmiri-Bharatpur(M C B),Chhattisgarh,23.2167227,82.2035806,,,,,unverified (kept old point)
+761,Mohla-Manpur-Ambagarh Chouki,Chhattisgarh,20.58197,80.743804,,,,,unverified (kept old point)
+762,Sakti,Chhattisgarh,21.9243353,82.9650923,,,,,unverified (kept old point)
+763,Sarangarh-Bilaigarh,Chhattisgarh,21.5427809,83.1261357,,,,,unverified (kept old point)
+764,Niuland,Nagaland,25.8504955,93.9180019,,,,,unverified (kept old point)
+765,Shamator,Nagaland,26.0714153,94.8745224,,,,,unverified (kept old point)

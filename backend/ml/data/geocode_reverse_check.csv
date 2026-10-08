@@ -1,0 +1,148 @@
+district_code,district,state,lat,lon,osm_places,osm_state,similarity,name_match
+9,Leh Ladakh,Ladakh,34.1527738,77.5756127,Leh district,Ladakh,1.0,True
+31,Ferozepur,Punjab,30.8978718,75.8161212,Ludhiana | Ludhiana (West) Tahsil,Punjab,0.12,False
+181,Shrawasti,Uttar Pradesh,27.5083429,82.0263569,Sharavasti | Ikauna,Uttar Pradesh,0.84,True
+200,Kaimur (Bhabua),Bihar,25.0398678,83.6085775,Kaimur | Bhabua,Bihar,1.0,True
+213,Purbi Champaran,Bihar,26.6465969,84.9091552,East Champaran | Motihari,Bihar,0.67,False
+267,Siaha,Mizoram,22.4895876,92.9791567,Saiha | Saiha,Mizoram,0.8,True
+293,Sribhumi,Assam,24.8720002,92.3598937,Karimganj | Karimganj,Assam,0.35,False
+346,Balasore,Odisha,21.5044973,86.919144,Baleshwar | Baleshwar (M),Odisha,0.59,False
+351,Deogarh,Odisha,21.5370786,84.7301184,Debagarh | Debagarh,Odisha,0.8,True
+366,Nabarangpur,Odisha,19.2288319,82.5668344,Nabarangapur | Nabarangapur P.S,Odisha,0.96,True
+372,Sonepur,Odisha,20.8431294,83.9063454,Subarnapur | Sonapur,Odisha,0.86,True
+384,Korea,Chhattisgarh,23.2382999,82.3906588,Manendragarh-Chirimiri-Bharatpur | Khadganva Tahsil,Chhattisgarh,0.2,False
+463,Daman,The Dadra And Nagar Haveli And Daman And Diu,20.4169701,72.833173,Daman,Dadra and Nagar Haveli and Daman and Diu,1.0,True
+464,Diu,The Dadra And Nagar Haveli And Daman And Diu,20.7137783,70.9853635,Diu | Diu,Dadra and Nagar Haveli and Daman and Diu,1.0,True
+465,Dadra And Nagar Haveli,The Dadra And Nagar Haveli And Daman And Diu,20.2736768,73.0045787,Dadra and Nagar Haveli | Nagar Haveli,Dadra and Nagar Haveli and Daman and Diu,1.0,True
+502,Ananthapuramu,Andhra Pradesh,14.0126989,78.4180222,Sri Sathya Sai | Nambulipulikunta,Andhra Pradesh,0.4,False
+504,Y.S.R. Kadapa,Andhra Pradesh,14.4607151,78.8237312,YSR Kadapa | Kadapa,Andhra Pradesh,1.0,True
+618,Kamrup Metro,Assam,26.1161783,91.7972485,Kamrup Metropolitan | Dispur,Assam,1.0,True
+625,Shopian,Jammu And Kashmir,33.7207837,74.7714244,Shopian | Shopian,Jammu and Kashmir,1.0,True
+626,Ganderbal,Jammu And Kashmir,34.2889322,75.0407983,Ganderbal | Kangan,Jammu and Kashmir,1.0,True
+627,Reasi,Jammu And Kashmir,33.2059909,74.8626794,Reasi district | Gool-Gulabgarh,Jammu and Kashmir,1.0,True
+628,Anjaw,Arunachal Pradesh,28.155391,96.8407237,Anjaw district | Goiliang Circle,Arunachal Pradesh,1.0,True
+629,Pratapgarh,Rajasthan,24.0232221,74.6250275,Pratapgarh | Pratapgarh Tehsil,Rajasthan,1.0,True
+630,Chikkaballapura,Karnataka,13.5897941,77.778793,Chikkaballapura | Chikkaballapura taluk,Karnataka,1.0,True
+631,Bengaluru South,Karnataka,12.720006,77.3184199,,,0.0,False
+632,North And Middle Andaman,Andaman And Nicobar Islands,12.6112387,92.8316541,,,0.0,False
+633,Kasganj,Uttar Pradesh,27.7888527,78.8229701,,,0.0,False
+634,Tiruppur,Tamil Nadu,10.7915267,77.5325466,,,0.0,False
+635,Yadgir,Karnataka,16.5744123,76.9254434,,,0.0,False
+636,Bijapur,Chhattisgarh,18.7935679,80.815939,,,0.0,False
+637,Narayanpur,Chhattisgarh,19.5842032,81.1136986,,,0.0,False
+638,Singrauli,Madhya Pradesh,24.2431343,82.3827672,,,0.0,False
+639,Alirajpur,Madhya Pradesh,22.2859525,74.3545628,,,0.0,False
+640,Amethi,Uttar Pradesh,26.346274,81.6252039,,,0.0,False
+641,Tapi,Gujarat,21.1916567,73.5560631,,,0.0,False
+642,Sukma,Chhattisgarh,18.2665423,81.2925234,,,0.0,False
+643,Kondagaon,Chhattisgarh,19.5885769,81.6628742,,Chhattisgarh,0.0,False
+644,Balodabazar-Bhatapara,Chhattisgarh,21.5731848,82.2994821,Baloda Bazar | Baloda Bazar Tahsil,Chhattisgarh,1.0,True
+645,Gariyaband,Chhattisgarh,20.5267561,82.1917217,Gariaband | Bindranavagarh(Gariyaband) Tahsil,Chhattisgarh,1.0,True
+646,Balod,Chhattisgarh,20.7277192,81.1446948,Balod | Balod Tahsil,Chhattisgarh,1.0,True
+647,Mungeli,Chhattisgarh,22.0661098,81.6874282,,Chhattisgarh,0.0,False
+648,Surajpur,Chhattisgarh,23.3577769,82.9761277,Surajpur | Bhaiyathan Tahsil,Chhattisgarh,1.0,True
+649,Balrampur-Ramanujganj,Chhattisgarh,23.616665,83.618798,Balrampur | Balrampur Tahsil,Chhattisgarh,1.0,True
+650,Bemetara,Chhattisgarh,21.6783867,81.4412578,Bemetara | Saja Tahsil,Chhattisgarh,1.0,True
+651,Fazilka,Punjab,30.3198406,74.1217943,Fazilka | Fazilka Tahsil,Punjab,1.0,True
+652,Khowai,Tripura,23.9563913,91.642107,Khowai | Teliamura,Tripura,1.0,True
+653,Sepahijala,Tripura,23.6658005,91.3200275,Sipahijala | Bishalgarh,Tripura,0.9,True
+654,Gomati,Tripura,23.4278179,91.6149726,Gomati | Amarpur,Tripura,1.0,True
+655,Unakoti,Tripura,24.1909849,92.0460483,Unakoti | Kumarghat,Tripura,1.0,True
+656,North Garo Hills,Meghalaya,25.8619841,90.7017705,North Garo Hills | Resubelpara,Meghalaya,1.0,True
+657,East Jaintia Hills,Meghalaya,25.2515761,92.4840501,East Jaintia Hills | Saipung,Meghalaya,1.0,True
+658,South West Khasi Hills,Meghalaya,25.3307221,91.3217388,South West Khasi Hills | Mawkyrwat,Meghalaya,1.0,True
+659,Sambhal,Uttar Pradesh,28.4271928,78.5564546,Sambhal | Chandausi,Uttar Pradesh,1.0,True
+660,Shamli,Uttar Pradesh,29.4811508,77.2901344,Shamli | Shamli,Uttar Pradesh,1.0,True
+661,Hapur,Uttar Pradesh,28.7166767,77.890433,Hapur | Hapur,Uttar Pradesh,1.0,True
+662,Pathankot,Punjab,32.3021899,75.6589406,Pathankot | Pathankot Tahsil,Punjab,1.0,True
+663,South West Garo Hills,Meghalaya,25.444631,89.9969655,South West Garo Hills | Zikzak,Meghalaya,1.0,True
+664,Alipurduar,West Bengal,26.6288169,89.4537824,Alipurduar | Alipurduar - I,West Bengal,1.0,True
+665,Palghar,Maharashtra,19.757249,73.0931199,Palghar | Vikramgad Taluka,Maharashtra,1.0,True
+666,Longding,Arunachal Pradesh,26.8794546,95.3155652,Longding | Longding HQ,Arunachal Pradesh,1.0,True
+667,Agar-Malwa,Madhya Pradesh,23.935092,76.1449595,Agar Malwa | Susner Tahsil,Madhya Pradesh,1.0,True
+668,Chhotaudepur,Gujarat,22.2224345,73.7778749,Chhota Udaipur | Bodeli Taluka,Gujarat,0.88,True
+669,Mahisagar,Gujarat,23.1912194,73.6644398,Mahisagar | Lunavada Taluka,Gujarat,1.0,True
+672,Arvalli,Gujarat,23.4634245,73.2990631,Aravalli | Modasa Taluka,Gujarat,0.93,True
+673,Morbi,Gujarat,22.8003959,70.886232,Morbi | Morbi Taluka,Gujarat,1.0,True
+674,Devbhumi Dwarka,Gujarat,22.2428993,68.9656446,Devbhumi Dwaraka | Okhamandal Taluka,Gujarat,0.97,True
+675,Gir Somnath,Gujarat,20.9298181,70.7627578,Gir Somnath | Kodinar Taluka,Gujarat,1.0,True
+676,Botad,Gujarat,22.0467097,71.6689617,Botad | Gadhada Taluka,Gujarat,1.0,True
+677,Kra Daadi,Arunachal Pradesh,27.9635418,93.7665654,Kra Daadi | Tali ADC,Arunachal Pradesh,1.0,True
+678,Namsai,Arunachal Pradesh,27.7140306,96.0159709,Namsai | Chongkham EAC,Arunachal Pradesh,1.0,True
+679,Siang,Arunachal Pradesh,28.477492,94.8165573,Siang | Boleng ADC,Arunachal Pradesh,1.0,True
+680,Nirmal,Telangana,19.091521,78.396609,Nirmal | Nirmal Rural mandal,Telangana,1.0,True
+681,Jagitial,Telangana,18.7908955,78.9118341,Jagtial | Jagtial mandal,Telangana,0.93,True
+682,Peddapalli,Telangana,18.6206531,79.4950171,Peddapalli | Kamanpur mandal,Telangana,1.0,True
+683,Rajanna Sircilla,Telangana,18.452116,78.7645584,Rajanna Sircilla | Konaraopet mandal,Telangana,1.0,True
+684,Mancherial,Telangana,18.9812967,79.5198096,Mancherial | Bellampalle mandal,Telangana,1.0,True
+685,Kamareddy,Telangana,18.316551,78.0539381,Kamareddy | Lingampet mandal,Telangana,1.0,True
+686,Hanumakonda,Telangana,18.032699,79.4283969,Hanumakonda | Dharmasagar mandal,Telangana,1.0,True
+687,Jayashankar Bhupalapally,Telangana,18.5159872,79.9693966,Jayashankar Bhupalapally | Mutharam_Mahadevpur mandal,Telangana,1.0,True
+688,Mahabubabad,Telangana,17.7138983,80.0413425,Mahabubabad | Gudur mandal,Telangana,1.0,True
+689,Jangoan,Telangana,17.71981,79.159451,Jangaon | Jangoan mandal,Telangana,1.0,True
+690,Bhadradri Kothagudem,Telangana,17.7166633,80.5712609,Bhadradri Kothagudem | Laxmidevipally mandal,Telangana,1.0,True
+691,Sangareddy,Telangana,17.8684342,77.8227189,Sangareddy | Raikode mandal,Telangana,1.0,True
+692,Siddipet,Telangana,18.0055851,78.896113,Siddipet | Kondapak mandal,Telangana,1.0,True
+693,Wanaparthy,Telangana,16.2852944,77.9864473,Wanaparthy | Wanaparthy mandal,Telangana,1.0,True
+694,Nagarkurnool,Telangana,16.4157626,78.6830433,Nagarkurnool | Achampet mandal,Telangana,1.0,True
+695,Jogulamba Gadwal,Telangana,16.0999202,77.7341584,Jogulamba Gadwal | Maldakal mandal,Telangana,1.0,True
+696,Suryapet,Telangana,17.0800139,79.792533,Suryapet | Munagala mandal,Telangana,1.0,True
+697,Yadadri Bhuvanagiri,Telangana,17.4281967,79.090491,Yadadri Bhuvanagiri | Valigonda mandal,Telangana,1.0,True
+698,Vikarabad,Telangana,17.2702855,77.745297,Vikarabad | Dharoor mandal,Telangana,1.0,True
+699,Kumuram Bheem Asifabad,Telangana,19.3338189,79.4219793,Kumuram Bheem Asifabad | Kagaznagar mandal,Telangana,1.0,True
+700,Medchal Malkajgiri,Telangana,17.5349835,78.5246387,Medchal–Malkajgiri | Alwal mandal,Telangana,1.0,True
+701,Charkhi Dadri,Haryana,28.6000997,76.1123707,Charkhi Dadri | Dadri,Haryana,1.0,True
+702,Kalimpong,West Bengal,27.027877,88.647194,Kalimpong | Gorubathan,West Bengal,1.0,True
+703,Jhargram,West Bengal,22.332417,86.9936688,Jhargram | Jhargram,West Bengal,1.0,True
+704,Paschim Bardhaman,West Bengal,23.6461884,87.1587969,Paschim Bardhaman | Jamuria,West Bengal,1.0,True
+705,Biswanath,Assam,26.7938596,93.3591936,Biswanath | Biswanath,Assam,1.0,True
+706,Majuli,Assam,27.0219529,94.327423,Majuli | Majuli,Assam,1.0,True
+707,South Salmara Mancachar,Assam,25.6296326,89.9315938,South Salmara-Mankachar | Mankachar,Assam,0.95,True
+708,Charaideo,Assam,27.0696859,95.0642272,Charaideo | Sonari,Assam,1.0,True
+709,Hojai,Assam,25.9629402,92.981829,Hojai | Lanka,Assam,1.0,True
+710,West Karbi Anglong,Assam,25.8529142,92.5875681,West Karbi Anglong | Donka,Assam,1.0,True
+718,Kamle,Arunachal Pradesh,27.7312325,94.0964663,Kamle | Raga ADC,Arunachal Pradesh,1.0,True
+719,Lower Siang,Arunachal Pradesh,27.8006983,94.5650233,Lower Siang | Gensi EAC,Arunachal Pradesh,1.0,True
+720,Mulugu,Telangana,18.3145348,80.3458816,Mulugu | Eturnagaram mandal,Telangana,1.0,True
+721,Narayanpet,Telangana,16.7005518,77.6164845,Narayanpet | Narayanpet mandal,Telangana,1.0,True
+722,Niwari,Madhya Pradesh,25.3123152,78.667564,Niwari | Prithvipur Tahsil,Madhya Pradesh,1.0,True
+723,Pakke Kessang,Arunachal Pradesh,27.1582856,93.1561502,Pakke-Kessang | Pakke Kessang,Arunachal Pradesh,1.0,True
+724,Leparada,Arunachal Pradesh,27.9831179,94.6879423,Lepa Rada | Basar ADC,Arunachal Pradesh,1.0,True
+725,Shi Yomi,Arunachal Pradesh,28.6851663,94.2367824,Shi Yomi | Monigong EAC,Arunachal Pradesh,1.0,True
+726,Hnahthial,Mizoram,22.9663656,93.0102645,Hnahthial | Hnahthial,Mizoram,1.0,True
+727,Saitual,Mizoram,23.8128569,92.9727975,Aizawl | Darlawn,Mizoram,0.62,False
+728,Khawzawl,Mizoram,23.4877894,93.1402943,Khawzawl | Khawzawl,Mizoram,1.0,True
+729,Kallakurichi,Tamil Nadu,11.7946847,79.0388211,Kallakurichi | Sankarapuram,Tamil Nadu,1.0,True
+730,Chengalpattu,Tamil Nadu,12.6149934,80.0053801,Chengalpattu | Tirukalukundram,Tamil Nadu,1.0,True
+731,Ranipet,Tamil Nadu,12.9186243,79.4081921,Ranipet | Wallajah,Tamil Nadu,1.0,True
+732,Tirupathur,Tamil Nadu,12.5858719,78.6313559,Tirupattur | Tirupathur,Tamil Nadu,1.0,True
+733,Tenkasi,Tamil Nadu,9.0933908,77.4758373,Tenkasi | Sankarankoil,Tamil Nadu,1.0,True
+734,Gaurela-Pendra-Marwahi,Chhattisgarh,22.8313186,81.958966,Gaurela-Pendra-Marwahi | Marwahi Tahsil,Chhattisgarh,1.0,True
+735,Mayiladuthurai,Tamil Nadu,11.1895598,79.69457,Mayiladuthurai | Sirkali,Tamil Nadu,1.0,True
+736,Noklak,Nagaland,26.1123947,95.0124041,Noklak | Noklak,Nagaland,1.0,True
+737,Malerkotla,Punjab,30.5372203,75.9088832,Malerkotla | Malerkotla Tahsil,Punjab,1.0,True
+738,Vijayanagara,Karnataka,14.9428567,76.0448007,Vijayanagara | Huvina Hadagali taluk,Karnataka,1.0,True
+741,Pakyong,Sikkim,27.228935,88.6471196,Pakyong | Pakyong subdivision,Sikkim,1.0,True
+742,Soreng,Sikkim,27.1901652,88.2006735,Soreng | Soreng,Sikkim,1.0,True
+743,Parvathipuram Manyam,Andhra Pradesh,18.7514985,83.5487473,Parvathipuram Manyam | Jiyyammavalasa,Andhra Pradesh,1.0,True
+744,Anakapalli,Andhra Pradesh,17.6715331,82.7747567,Anakapalli | Makavarapalem,Andhra Pradesh,1.0,True
+745,Alluri Sitharama Raju,Andhra Pradesh,18.0591962,82.6749006,Alluri Sitharama Raju | Paderu,Andhra Pradesh,1.0,True
+746,Kakinada,Andhra Pradesh,17.120459,82.1842504,Kakinada | Pithapuram,Andhra Pradesh,1.0,True
+747,Dr. B.R. Ambedkar Konaseema,Andhra Pradesh,16.6294048,82.081931,Konaseema | Mummidivaram,Andhra Pradesh,1.0,True
+748,Eluru,Andhra Pradesh,17.013798,81.0803354,Eluru | T.Narasapuram,Andhra Pradesh,1.0,True
+749,Ntr,Andhra Pradesh,16.8169118,80.2502299,NTR | Penuganchiprolu,Andhra Pradesh,1.0,True
+750,Bapatla,Andhra Pradesh,15.9344304,80.4505522,Bapatla | Bapatla,Andhra Pradesh,1.0,True
+751,Palnadu,Andhra Pradesh,16.3231038,79.6975049,Palnadu | Bollapalle,Andhra Pradesh,1.0,True
+752,Tirupati,Andhra Pradesh,13.8891927,79.6730504,Tirupati | Thottambedu,Andhra Pradesh,1.0,True
+753,Annamayya,Andhra Pradesh,13.7883575,78.6346286,Annamayya | Gurramkonda,Andhra Pradesh,1.0,True
+754,Sri Sathya Sai,Andhra Pradesh,14.1681806,77.9641188,Sri Sathya Sai | Nallamada,Andhra Pradesh,1.0,True
+755,Nandyal,Andhra Pradesh,15.5247879,78.4149396,Nandyal | Nandyal,Andhra Pradesh,1.0,True
+757,Tseminyu,Nagaland,25.9410368,94.1685474,Tseminyü | Tseminyu,Nagaland,1.0,True
+758,Chumoukedima,Nagaland,25.808681,93.714867,Chümoukedima | Dhansiripar,Nagaland,0.96,True
+759,Khairagarh-Chhuikhadan-Gandai,Chhattisgarh,21.528849,80.9484326,Khairagarh-Chhuikhadan-Gandai | Chhuikhadan Tahsil,Chhattisgarh,1.0,True
+760,Manendragarh-Chirmiri-Bharatpur(M C B),Chhattisgarh,23.2167227,82.2035806,Manendragarh-Chirimiri-Bharatpur | Manendragarh Tahsil,Chhattisgarh,0.94,True
+761,Mohla-Manpur-Ambagarh Chouki,Chhattisgarh,20.58197,80.743804,Mohla-Manpur-Ambagarh Chowki | Mohla Tahsil,Chhattisgarh,0.96,True
+762,Sakti,Chhattisgarh,21.9243353,82.9650923,Sakti | Malkharoda Tahsil,Chhattisgarh,1.0,True
+763,Sarangarh-Bilaigarh,Chhattisgarh,21.5427809,83.1261357,Sarangarh-Bilaigarh | Sarangarh Tahsil,Chhattisgarh,1.0,True
+764,Niuland,Nagaland,25.8504955,93.9180019,Niuland | Nihokhu,Nagaland,1.0,True
+765,Shamator,Nagaland,26.0714153,94.8745224,,Nagaland,0.0,False

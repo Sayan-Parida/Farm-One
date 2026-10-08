@@ -7,7 +7,7 @@
     "test": "2018-2022"
   },
   "history_lag_years": "years Y-8 .. Y-4 (matches data publication lag)",
-  "n_iter": 1200,
+  "n_iter": 1371,
   "hyperparameters": {
     "learning_rate": 0.05,
     "max_leaf_nodes": 63,
@@ -19,25 +19,25 @@
     "model_weight": 0.75,
     "valid_median_APE_by_weight": {
       "0.0": 18.64,
-      "0.25": 17.61,
-      "0.5": 17.17,
-      "0.75": 16.98,
-      "1.0": 17.3
+      "0.25": 17.57,
+      "0.5": 17.31,
+      "0.75": 17.16,
+      "1.0": 17.47
     }
   },
   "test_overall": {
     "model_actual_weather": {
       "n": 36096,
-      "MAE_t_ha": 1.03,
-      "median_APE_pct": 17.5,
-      "within_20pct": 55.0,
+      "MAE_t_ha": 1.034,
+      "median_APE_pct": 17.7,
+      "within_20pct": 54.9,
       "R2_log": 0.922
     },
     "model_pre_season": {
       "n": 36096,
-      "MAE_t_ha": 1.032,
-      "median_APE_pct": 17.6,
-      "within_20pct": 54.8,
+      "MAE_t_ha": 1.037,
+      "median_APE_pct": 17.7,
+      "within_20pct": 54.6,
       "R2_log": 0.921
     },
     "baseline_district_history": {
@@ -62,166 +62,166 @@
       "R2_log": 0.919
     }
   },
-  "pre_season_80pct_interval_coverage_pct": 81.1,
+  "pre_season_80pct_interval_coverage_pct": 80.9,
   "test_by_crop": {
     "Arhar/Tur": {
       "n": 1719,
-      "model_pre_season_mAPE": 21.2,
-      "model_actual_weather_mAPE": 20.5,
+      "model_pre_season_mAPE": 19.9,
+      "model_actual_weather_mAPE": 20.0,
       "baseline_district_mAPE": 21.4,
       "baseline_history_plus_trend_mAPE": 21.0
     },
     "Bajra": {
       "n": 1115,
-      "model_pre_season_mAPE": 15.4,
-      "model_actual_weather_mAPE": 15.1,
+      "model_pre_season_mAPE": 14.5,
+      "model_actual_weather_mAPE": 14.6,
       "baseline_district_mAPE": 17.7,
       "baseline_history_plus_trend_mAPE": 16.7
     },
     "Barley": {
       "n": 781,
-      "model_pre_season_mAPE": 16.1,
-      "model_actual_weather_mAPE": 16.0,
+      "model_pre_season_mAPE": 16.8,
+      "model_actual_weather_mAPE": 16.6,
       "baseline_district_mAPE": 17.9,
       "baseline_history_plus_trend_mAPE": 13.7
     },
     "Castor Seed": {
       "n": 313,
-      "model_pre_season_mAPE": 17.9,
-      "model_actual_weather_mAPE": 17.0,
+      "model_pre_season_mAPE": 18.2,
+      "model_actual_weather_mAPE": 17.6,
       "baseline_district_mAPE": 18.9,
       "baseline_history_plus_trend_mAPE": 17.1
     },
     "Gram": {
       "n": 1659,
-      "model_pre_season_mAPE": 23.7,
-      "model_actual_weather_mAPE": 23.2,
+      "model_pre_season_mAPE": 23.9,
+      "model_actual_weather_mAPE": 23.5,
       "baseline_district_mAPE": 25.7,
       "baseline_history_plus_trend_mAPE": 22.0
     },
     "Groundnut": {
       "n": 2005,
-      "model_pre_season_mAPE": 16.5,
-      "model_actual_weather_mAPE": 16.3,
+      "model_pre_season_mAPE": 16.7,
+      "model_actual_weather_mAPE": 16.4,
       "baseline_district_mAPE": 20.1,
       "baseline_history_plus_trend_mAPE": 17.4
     },
     "Jowar": {
       "n": 1344,
-      "model_pre_season_mAPE": 25.6,
-      "model_actual_weather_mAPE": 25.8,
+      "model_pre_season_mAPE": 25.8,
+      "model_actual_weather_mAPE": 25.9,
       "baseline_district_mAPE": 26.1,
       "baseline_history_plus_trend_mAPE": 25.6
     },
     "Linseed": {
       "n": 516,
-      "model_pre_season_mAPE": 16.1,
-      "model_actual_weather_mAPE": 16.9,
+      "model_pre_season_mAPE": 16.3,
+      "model_actual_weather_mAPE": 17.1,
       "baseline_district_mAPE": 14.8,
       "baseline_history_plus_trend_mAPE": 17.2
     },
     "Maize": {
       "n": 3715,
-      "model_pre_season_mAPE": 16.9,
-      "model_actual_weather_mAPE": 17.2,
+      "model_pre_season_mAPE": 17.1,
+      "model_actual_weather_mAPE": 16.9,
       "baseline_district_mAPE": 21.8,
       "baseline_history_plus_trend_mAPE": 19.0
     },
     "Masoor": {
       "n": 1178,
-      "model_pre_season_mAPE": 18.5,
-      "model_actual_weather_mAPE": 18.9,
+      "model_pre_season_mAPE": 19.5,
+      "model_actual_weather_mAPE": 19.4,
       "baseline_district_mAPE": 17.9,
       "baseline_history_plus_trend_mAPE": 17.8
     },
     "Moong(Green Gram)": {
       "n": 2240,
-      "model_pre_season_mAPE": 24.6,
-      "model_actual_weather_mAPE": 24.5,
+      "model_pre_season_mAPE": 24.8,
+      "model_actual_weather_mAPE": 24.1,
       "baseline_district_mAPE": 25.4,
       "baseline_history_plus_trend_mAPE": 23.8
     },
     "Onion": {
       "n": 1230,
-      "model_pre_season_mAPE": 21.1,
-      "model_actual_weather_mAPE": 22.0,
+      "model_pre_season_mAPE": 21.8,
+      "model_actual_weather_mAPE": 22.3,
       "baseline_district_mAPE": 22.2,
       "baseline_history_plus_trend_mAPE": 22.6
     },
     "Potato": {
       "n": 1537,
-      "model_pre_season_mAPE": 18.7,
-      "model_actual_weather_mAPE": 18.7,
+      "model_pre_season_mAPE": 19.0,
+      "model_actual_weather_mAPE": 18.6,
       "baseline_district_mAPE": 19.7,
       "baseline_history_plus_trend_mAPE": 19.3
     },
     "Ragi": {
       "n": 607,
-      "model_pre_season_mAPE": 15.4,
-      "model_actual_weather_mAPE": 14.9,
+      "model_pre_season_mAPE": 15.1,
+      "model_actual_weather_mAPE": 15.6,
       "baseline_district_mAPE": 14.5,
       "baseline_history_plus_trend_mAPE": 14.6
     },
     "Rapeseed &Mustard": {
       "n": 2099,
-      "model_pre_season_mAPE": 19.7,
-      "model_actual_weather_mAPE": 18.9,
+      "model_pre_season_mAPE": 20.0,
+      "model_actual_weather_mAPE": 19.3,
       "baseline_district_mAPE": 18.9,
       "baseline_history_plus_trend_mAPE": 15.5
     },
     "Rice": {
       "n": 4329,
-      "model_pre_season_mAPE": 12.9,
+      "model_pre_season_mAPE": 13.0,
       "model_actual_weather_mAPE": 12.9,
       "baseline_district_mAPE": 13.6,
       "baseline_history_plus_trend_mAPE": 12.8
     },
     "Sesamum": {
       "n": 1664,
-      "model_pre_season_mAPE": 18.8,
-      "model_actual_weather_mAPE": 18.5,
+      "model_pre_season_mAPE": 19.2,
+      "model_actual_weather_mAPE": 19.5,
       "baseline_district_mAPE": 18.9,
       "baseline_history_plus_trend_mAPE": 20.6
     },
     "Small Millets": {
       "n": 675,
-      "model_pre_season_mAPE": 14.2,
-      "model_actual_weather_mAPE": 14.8,
+      "model_pre_season_mAPE": 15.0,
+      "model_actual_weather_mAPE": 15.0,
       "baseline_district_mAPE": 15.4,
       "baseline_history_plus_trend_mAPE": 15.4
     },
     "Soyabean": {
       "n": 789,
-      "model_pre_season_mAPE": 21.9,
-      "model_actual_weather_mAPE": 22.2,
+      "model_pre_season_mAPE": 22.1,
+      "model_actual_weather_mAPE": 22.4,
       "baseline_district_mAPE": 21.9,
       "baseline_history_plus_trend_mAPE": 21.2
     },
     "Sugarcane": {
       "n": 1426,
-      "model_pre_season_mAPE": 11.2,
+      "model_pre_season_mAPE": 11.5,
       "model_actual_weather_mAPE": 11.3,
       "baseline_district_mAPE": 12.8,
       "baseline_history_plus_trend_mAPE": 10.8
     },
     "Sunflower": {
       "n": 417,
-      "model_pre_season_mAPE": 20.4,
-      "model_actual_weather_mAPE": 21.8,
+      "model_pre_season_mAPE": 20.6,
+      "model_actual_weather_mAPE": 22.1,
       "baseline_district_mAPE": 25.4,
       "baseline_history_plus_trend_mAPE": 23.3
     },
     "Urad": {
       "n": 2492,
-      "model_pre_season_mAPE": 18.8,
-      "model_actual_weather_mAPE": 18.4,
+      "model_pre_season_mAPE": 18.2,
+      "model_actual_weather_mAPE": 18.1,
       "baseline_district_mAPE": 18.0,
       "baseline_history_plus_trend_mAPE": 17.5
     },
     "Wheat": {
       "n": 2246,
-      "model_pre_season_mAPE": 14.5,
-      "model_actual_weather_mAPE": 15.0,
+      "model_pre_season_mAPE": 15.8,
+      "model_actual_weather_mAPE": 15.8,
       "baseline_district_mAPE": 16.0,
       "baseline_history_plus_trend_mAPE": 12.4
     }

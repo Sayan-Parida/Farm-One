@@ -438,8 +438,9 @@ def predict_yield(features: dict):
     observed_txt = (f"{basis['months_observed']} of {basis['months_in_season']} season months use observed "
                     f"weather; the rest use the district's normal climate."
                     if basis["months_observed"] else
-                    "The season hasn't started yet (or no complete month is available), so normal "
-                    "climate for the district is assumed.")
+                    "No observed weather is available for this season yet (it hasn't started, or the "
+                    "rainfall data for its months isn't published), so the district's normal climate "
+                    "is assumed.")
     note = (f"District-average estimate for {crop}, {season_label}, {district['district']} "
             f"({district['state']}). Based on official yields {res['hist']['years']} "
             f"(avg {res['hist']['mean_yield_t_ha']} t/ha) and season weather. {observed_txt} "

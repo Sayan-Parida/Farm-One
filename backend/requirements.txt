@@ -1,12 +1,17 @@
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
-python-multipart==0.0.6
-httpx==0.26.0
-python-dotenv==1.0.0
-numpy==2.3.3
-pandas==2.3.3
-scikit-learn==1.7.2  # 1.8.0 _cyutility.pyd is blocked by Windows Smart App Control
-joblib==1.5.3
+# Tested on Python 3.13 (pins match the versions the app is run and tested with).
+# The old pins (pydantic==2.5.3 -> pydantic-core 2.14.6, numpy 2.3.3, ...) have no
+# Python 3.13 wheels and failed to install.
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+python-multipart==0.0.32
+httpx==0.28.1
+python-dotenv==1.2.3
+numpy==2.5.3
+pandas==3.0.6
+# 1.7.x on purpose: the 1.8.0 binary is blocked by Windows Smart App Control on some machines,
+# and models/yield_district_model.pkl was saved with 1.7.2.
+scikit-learn==1.7.2
+joblib==1.6.0
 global-land-mask==1.0.0
 openai==3.26.0
